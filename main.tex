@@ -1,0 +1,194 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage{vntex}
+\usepackage{a4wide,amssymb,epsfig,latexsym,array,hhline,fancyhdr}
+\usepackage[normalem]{ulem}
+\usepackage[makeroom]{cancel}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{multicol,longtable,amscd}
+\usepackage{diagbox}%Make diagonal lines in tables
+\usepackage{booktabs}
+\usepackage{alltt}
+\usepackage[framemethod=tikz]{mdframed}% For highlighting paragraph backgrounds
+\usepackage{caption,subcaption}
+\usepackage{lastpage}
+\usepackage[lined,boxed,commentsnumbered]{algorithm2e}
+\usepackage{enumerate}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{graphicx}							% Standard graphics package
+\usepackage{array}
+\usepackage{tabularx, caption}
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{rotating}
+\usepackage{graphics}
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{epsfig}
+\usepackage{tikz}
+\usepackage{listings}
+\usepackage{float}
+\usetikzlibrary{arrows,snakes,backgrounds}
+\usepackage{hyperref}
+\hypersetup{urlcolor=black,linkcolor=black,citecolor=black,colorlinks=true} 
+%\usepackage{pstcol} 								% PSTricks with the standard color package
+
+\newtheorem{theorem}{{\bf Theorem}}
+\newtheorem{property}{{\bf Property}}
+\newtheorem{proposition}{{\bf Proposition}}
+\newtheorem{corollary}[proposition]{{\bf Corollary}}
+\newtheorem{lemma}[proposition]{{\bf Lemma}}
+
+\AtBeginDocument{\renewcommand*\contentsname{Mục lục}}
+\AtBeginDocument{\renewcommand*\refname{Tài liệu tham khảo}}
+\AtBeginDocument{\renewcommand*\listfigurename{Tiêu đề ảnh}}
+%\usepackage{fancyhdr}
+\setlength{\headheight}{40pt}
+\pagestyle{fancy}
+\fancyhead{} % clear all header fields
+\fancyhead[L]{
+ \begin{tabular}{rl}
+    \begin{picture}(25,15)(0,0)
+    \put(0,-8){\includegraphics[width=8mm, height=8mm]{hcmut.png}}
+   \end{picture}&
+	\begin{tabular}{l}
+		\textbf{\bf \ttfamily Trường Đại Học Bách Khoa Tp.Hồ Chí Minh}\\
+		\textbf{\bf \ttfamily Khoa Khoa Học \& Kỹ Thuật Máy Tính}
+	\end{tabular} 	
+ \end{tabular}
+}
+\fancyhead[R]{
+	\begin{tabular}{l}
+		\tiny \bf \\
+		\tiny \bf 
+	\end{tabular}  }
+\fancyfoot{} % clear all footer fields
+\fancyfoot[L]{\scriptsize \ttfamily Báo cáo môn Kiểm tra phần mềm - Học kì 241}
+\fancyfoot[R]{\scriptsize \ttfamily Trang {\thepage}/\pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{0.3pt}
+
+
+%%%
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{3}
+\makeatletter
+\newcounter {subsubsubsection}[subsubsection]
+\renewcommand\thesubsubsubsection{\thesubsubsection .\@alph\c@subsubsubsection}
+\newcommand\subsubsubsection{\@startsection{subsubsubsection}{4}{\z@}%
+                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                     {1.5ex \@plus .2ex}%
+                                     {\normalfont\normalsize\bfseries}}
+\newcommand*\l@subsubsubsection{\@dottedtocline{3}{10.0em}{4.1em}}
+\newcommand*{\subsubsubsectionmark}[1]{}
+%\renewcommand{\thesubsubsection}{\alph{subsubsection}}
+\everymath{\color{blue}}
+\makeatother
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+VIETNAM NATIONAL UNIVERSITY, HO CHI MINH CITY \\
+UNIVERSITY OF TECHNOLOGY \\
+FACULTY OF COMPUTER SCIENCE AND ENGINEERING
+\end{center}
+\vspace{1cm}
+
+\begin{figure}[h!]
+\begin{center}
+\includegraphics[width=3cm]{hcmut.png}
+\end{center}
+\end{figure}
+
+\vspace{1cm}
+
+
+\begin{center}
+\begin{tabular}{c}
+\multicolumn{1}{l}{\textbf{{\Large KIỂM TRA PHẦN MỀM (CO3015)}}}\\
+
+~~\\
+\hline
+\\
+\\
+\textbf{{\Huge BTL 2: BLACK BOX TESTING}}\\
+\\
+
+\\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{3cm}
+
+\begin{table}[h]
+\begin{tabular}{rrl}
+\hspace{3 cm} & Giảng viên hướng dẫn: & Bùi Hoài Thắng\\
+
+& Sinh viên thực hiện:
+& Phạm Đức Hào - 2111128\\
+&& Hồ Trọng Nhân - 2111899\\
+&& Đậu Đức Quân - 2114531\\
+&& Nguyễn Phúc Minh Quân - 2110479\\
+&& Trần Mậu Thật - 2112342
+\end{tabular}
+\end{table}
+
+\begin{center}
+{\footnotesize HO CHI MINH CITY, NOVEMBER 2024}
+\end{center}
+\end{titlepage}
+
+
+\newpage
+\tableofcontents
+\newpage
+\section{Giới thiệu:}
+
+\section{Phân công}
+ \begin{table}[H]
+\centering
+\begin{tabular}{|p{3cm}|p{3cm}|l|c|}
+\hline 
+Reviewer &
+Validator &
+  \multicolumn{1}{c|}{Feature} &Contributon \\ \hline
+Đậu Đức Quân & Trần Mậu Thật &&\\\hline
+Hồ Trọng Nhân & Đậu Đức Quân &&\\ \hline
+Nguyễn Phúc Minh Quân & Hồ Trọng Nhân &&\\ \hline
+Phạm Đức Hào & Nguyễn Phúc Minh Quân &&\\ \hline
+Trần Mậu Thật & Phạm Đức Hào &&\\ \hline
+\end{tabular}
+\caption{Bảng phân công công việc}
+\label{tab:my-table}
+\end{table}
+
+
+
+
+
+\newpage
+\section{Quá trình làm việc nhóm:}
+\subsection{Buổi họp trao đổi những thắc mắc của các thành viên về bài tập lớn và phân công công việc. (15/11/2024)}
+Nội dung chính:
+\begin{itemize}
+    \item
+\end{itemize}
+Kết quả cuộc họp:
+\begin{itemize}
+  \item
+\end{itemize}
+
+\newpage
+
+\section{Kết quả kiểm thử}
+
+\subsection{Tính năng 1}
+\subsubsection{Mô tả}
+\subsubsection{Test case}
+\subsection{Tính năng 2}
+
+\section{Tổng kết}
+\end{document}
