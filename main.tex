@@ -190,5 +190,154 @@ Kết quả cuộc họp:
 \subsubsection{Test case}
 \subsection{Tính năng 2}
 
+\subsection{Chức năng Tạo sự kiện (Create event)}
+\subsubsection{Use case}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|p{11cm}|}
+        \hline
+        Category & Description \\
+        \hline
+        Use case name & Create event\\
+        \hline
+        Actor & Manager \\
+        \hline
+        Assumption & Người dùng ở trang \url{https://sandbox.moodledemo.net/}. Ngôn ngữ trang web được chỉnh tiếng Việt. Người dùng đăng nhập thành công dưới bất kì tài khoản nào. Người dùng đang ở trang "Bảng điều khiển". \\
+        \hline
+        Normal flow & 1. Người dùng nhấn vào nút "Sự kiện mới". \\
+        & 2. Hệ thống hiển thị bảng "Sự kiện mới". \\
+        & 3. Người dùng nhập thông tin có thể bao gồm chữ, số và kí tự vào ô "Tên sự kiện". \\
+        & 4. Người dùng chọn thông tin ngày, tháng, năm, giờ, phút của sự kiện. \\
+        & 5. Người dùng chọn "Thành viên" hoặc "Hệ thống" tại hàng "Loại sự kiện".\\
+        & 6. Người dùng nhấn vào nút "Lưu". \\
+        & 7. Hệ thống đóng bảng "Sự kiện mới". \\
+        \hline
+        Alternative flows & A1. Tại bước 6: \\
+        & 6.1. Người dùng nhấn vào nút "Show more". \\
+        & 6.2. Người dùng nhập thông tin vào ô "Mô tả". \\
+        & Quay lại bước 6 trên Normal flow. \\
+        & \\
+        & A2. Tại bước 6: \\
+        & 6.1. Người dùng nhấn vào nút "Show more". \\
+        & 6.2. Người dùng nhập thông tin vào ô "Địa chỉ". \\
+        & Quay lại bước 6 trên Normal flow. \\
+        & \\
+        & A3. Tại bước 6: \\
+        & 6.1. Người dùng nhấn vào nút "Show more". \\
+        & 6.2. Người dùng chọn lựa chọn "Tới" tại hàng "Thời lượng". \\
+        & 6.3. Người dùng chọn thông tin ngày, tháng, năm, giờ, phút kết thúc của sự kiện. \\
+        & Quay lại bước 6 trên Normal flow. \\
+        & \\
+        & A4. Tại bước 6: \\
+        & 6.1. Người dùng nhấn vào nút "Show more". \\
+        & 6.2. Người dùng chọn lựa chọn "Thời lượng tính bằng phút" tại hàng "Thời lượng". \\
+        & 6.3. Người dùng nhập thông tin vào ô dưới "Thời lượng tính bằng phút". \\
+        & Quay lại bước 6 trên Normal flow. \\
+        & \\
+        & A5. Tại bước 6: \\
+        & 6.1. Người dùng nhấn vào nút "Show more". \\
+        & 6.2. Người dùng chọn vào ô "Lặp lại sự kiện này". \\
+        & 6.3. Người dùng nhập thông tin vào ô "Lặp lại hàng tuần, tạo ra tất cả". \\
+        & Quay lại bước 6 trên Normal flow. \\
+        & \\
+        & A6. Tại bước 5: \\
+        & 5.1. Người dùng chọn "Mục" tại hàng "Loại sự kiện". \\
+        & 5.2. Người dùng chọn các mục cần thiết tại hàng "Mục". \\
+        & Quay lại bước 6 trên Normal flow. \\
+        \hline
+        Exception flows & \\
+        & E1. Tại bước 3: \\
+        & 3.1. Người dùng không nhập vào ô "Tên sự kiện". \\
+        & 3.2. Người dùng nhấn nút "Lưu". \\
+        & 3.3. Hệ thống báo lỗi "Bắt buộc". \\
+        & Quay lại bước 3 trên Normal flow. \\
+        & \\
+        & E2. Tại bước 6: \\
+        & 6.1. Người dùng nhấn vào nút "Show more". \\
+        & 6.2. Người dùng chọn lựa chọn "Thời lượng tính bằng phút" tại hàng "Thời lượng". \\
+        & 6.3. Người dùng nhập thông tin không phải số nguyên dương vào ô dưới "Thời lượng tính bằng phút". \\
+        & 6.4. Người dùng nhấn nút "Lưu". \\
+        & 6.5. Hệ thống báo lỗi "Khoảng thời gian tính bằng phút mà bạn vừa nhập không có hiệu lực. Vui lòng nhập một khoảng thời gian tính bằng phút lớn hơn 0 hoặc không chọn thời gian.". \\
+        & Quay lại bước 6.2 trên Alternative flow A4. \\
+        & \\
+        & E3. Tại bước 6: \\
+        & 6.1. Người dùng nhấn vào nút "Show more". \\
+        & 6.2. Người dùng chọn lựa chọn "Tới" tại hàng "Thời lượng". \\
+        & 6.3. Người dùng chọn thông tin ngày, tháng, năm, giờ, phút kết thúc của sự kiện diễn ra trước thời điểm bắt đầu. \\
+        & 6.4. Người dùng nhấn vào nút "Lưu". \\
+        & 6.5. Hệ thống báo lỗi "Khoảng thời gian ngày và giờ bạn chọn diễn ra trước khi sự kiện bắt đầu. Vui lòng điều chỉnh trước khi tiếp tục.". \\
+        & Quay lại bước 6.3 trên Alternative flow A3. \\
+        & \\
+        E4. Tại bước 5: \\
+        & 5.1. Người dùng chọn "Mục" tại hàng "Loại sự kiện". \\
+        & 5.2. Người dùng xóa hết các mục tại hàng "Mục". \\
+        & 5.3. Người dùng nhấn vào nút "Lưu". \\
+        & 5.4. Hệ thống báo lỗi "Hãy chọn một chuyên mục". \\
+        & Quay lại bước 5.2 trên Alternative flow A6. \\
+        \hline
+    \end{tabular}
+    \caption{Use case: Create event}
+    \label{Use case: Create event}
+\end{table}
+\subsubsection{Activity diagram}
+\subsubsection{Sử dụng phương pháp Boundary value analysis để kiểm thử}
+\subsubsection{Sử dụng phương pháp Equivalence class partitioning}
+\subsubsection{Sử dụng phương pháp Decision table để kiểm thử}
+\subsubsection{Sử dụng phương pháp Use-case testing để kiểm thử}
+
+\subsection{Chức năng Đổi mật khẩu (Change password)}
+\subsubsection{Use case}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|p{11cm}|}
+        \hline
+        Category & Description \\
+        \hline
+        Use case name & Change password \\
+        \hline
+        Actor & Người dùng \\
+        \hline
+        Assumption & Người dùng ở trang \url{https://sandbox.moodledemo.net/}. Ngôn ngữ trang web được chỉnh tiếng Việt. Người dùng đăng nhập thành công dưới bất kì tài khoản nào. Người dùng đang ở trang "Trang chủ". \\
+        \hline
+        Normal flow & 1. Người dùng nhấn vào nút mũi tên góc phải trên ngay bên cạnh hình đại diện. \\
+        & 2. Người dùng nhấn vào "Tùy chọn". \\
+        & 3. Người dùng nhấn vào "Đổi mật khẩu". \\
+        & 4. Người dùng nhập đúng mật khẩu hiện tại vào ô "Mật khẩu hiện hành".\\
+        & 5. Người dùng nhập mật khẩu mới có thể bao gồm cả chữ, số, kí tự vào ô "Mật khẩu mới".\\
+        & 6. Người dùng nhập chính xác thông tin đã nhập ở ô "Mật khẩu mới" vào ô "Mật khẩu mới (lại)".\\
+        & 7. Người dùng nhấn vào nút "Lưu những thay đổi". \\
+        \hline
+        Alternative flows & Không có. \\
+        \hline
+        Exception flows & E1. Tại bước 4: \\
+        & 4.1. Người dùng không nhập thông tin ở nội dung "Mật khẩu hiện hành". \\ 
+        & Thực hiện tiếp tục bước 5. Sau khi thực hiện bước 7, hệ thống sẽ hiển thị lỗi "Bắt buộc". Quay lại bước 4 trên Normal flow. \\
+        & \\
+        & E2. Tại bước 5: \\
+        & 5.1. Người dùng không nhập thông tin ở nội dung "Mật khẩu mới". \\
+        & Thực hiện tiếp tục bước 6. Sau khi thực hiện bước 7, hệ thống sẽ hiển thị lỗi "Bắt buộc". Quay lại bước 5 trên Normal flow. \\
+        & \\
+        & E3. Tại bước 6: \\
+        & 6.1. Người dùng không nhập thông tin ở nội dung "Mật khẩu mới (lại)". \\
+        & Thực hiện tiếp tục bước 7. Sau khi thực hiện bước 7, hệ thống sẽ hiển thị lỗi "Bắt buộc". Quay lại bước 6 trên Normal flow. \\
+        & \\
+        & E4. Tại bước 4: \\
+        & 4.1. Người dùng nhập nhập thông tin tại ô "Mật khẩu hiện hành" chưa chính xác. \\
+        & Thực hiện tiếp tục bước 5. Sau khi thực hiện bước 7, hệ thống sẽ hiển thị lỗi "Đăng nhập sai, xin vui lòng thử lại". Quay lại bước 4 trên Normal flow. \\
+        & \\
+        & E5. Tại bước 6 : \\
+        & 6.1. Người dùng nhập nhập thông tin tại ô "Mật khẩu mới (lại)" chưa khớp với nội dung đã nhập tại ô "Mật khẩu mới". \\
+        & Thực hiện tiếp tục bước 7. Sau khi thực hiện bước 7, hệ thống sẽ hiển thị lỗi "Các mật khẩu không trùng khớp". Quay lại bước 5 trên Normal flow. \\
+        \hline
+    \end{tabular}
+    \caption{Use case: Change password}
+    \label{Use case: Change password}
+\end{table}
+\subsubsection{Activity diagram}
+\subsubsection{Sử dụng phương pháp Boundary value analysis để kiểm thử}
+\subsubsection{Sử dụng phương pháp Equivalence class partitioning}
+\subsubsection{Sử dụng phương pháp Decision table để kiểm thử}
+\subsubsection{Sử dụng phương pháp Use-case testing để kiểm thử}
+
 \section{Tổng kết}
 \end{document}
