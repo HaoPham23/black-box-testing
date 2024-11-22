@@ -4,6 +4,7 @@
 \usepackage[normalem]{ulem}
 \usepackage[makeroom]{cancel}
 \usepackage{amsmath}
+\usepackage{longtable}
 \usepackage{amsthm}
 \usepackage{multicol,longtable,amscd}
 \usepackage{diagbox}%Make diagonal lines in tables
@@ -174,11 +175,25 @@ Trần Mậu Thật & Phạm Đức Hào &&\\ \hline
 \subsection{Buổi họp trao đổi những thắc mắc của các thành viên về bài tập lớn và phân công công việc. (15/11/2024)}
 Nội dung chính:
 \begin{itemize}
-    \item
+    \item Thảo luận về nội dung bài tập lớn.
+    \item Thảo luận cách phân công công việc cho từng thành viên.
 \end{itemize}
 Kết quả cuộc họp:
 \begin{itemize}
-  \item
+  \item Mỗi thành viên đã hiểu rõ nhiệm vụ của mình.
+  \item Xác định được deadline và buổi meet sync kế tiếp.
+\end{itemize}
+
+\subsection{Buổi họp đồng bộ tiến độ làm việc của các thành viên. (22/11/2024)}
+Nội dung chính:
+\begin{itemize}
+    \item Mỗi thành viên trình bày công việc đã làm được và khó khăn cần sự trợ giúp.
+    \item Mỗi thành viên review công việc của thành viên khác.
+\end{itemize}
+Kết quả cuộc họp:
+\begin{itemize}
+    \item Mỗi thành viên đã hoàn thành công việc của mình.
+    \item Bản báo cáo đã được hoàn thiện và sẵn sàng nộp. 
 \end{itemize}
 
 \newpage
@@ -333,6 +348,89 @@ Kết quả cuộc họp:
     \caption{Use case: Change password}
     \label{Use case: Change password}
 \end{table}
+\subsubsection{Activity diagram}
+\subsubsection{Sử dụng phương pháp Boundary value analysis để kiểm thử}
+\subsubsection{Sử dụng phương pháp Equivalence class partitioning}
+\subsubsection{Sử dụng phương pháp Decision table để kiểm thử}
+\subsubsection{Sử dụng phương pháp Use-case testing để kiểm thử}
+
+\subsection{Chức năng Tạo bài kiểm tra (Create quiz)}
+\subsubsection{Use case}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|p{11cm}|}
+        \hline
+        Category & Description \\
+        \hline
+        Use case name & Create quiz \\
+        \hline
+        Actor & Giáo viên \\
+        \hline
+        Assumption & Người dùng đang ở đường dẫn \url{https://sandbox.moodledemo.net/}. Ngôn ngữ của trang web được chỉnh là Tiếng Việt. Người dùng đăng nhập thành công dưới tài khoản giáo viên. Người dùng đang ở trang "Trang chủ".\\\hline
+        Normal flow & 
+        1. Người dùng chọn Khoá học cần tạo bài kiểm tra. \\
+        & 2. Người dùng bật "Chế độ chỉnh sửa" ở góc phải trên trang web. \\
+        & 3. Người dùng chọn "Thêm một hoạt động hoặc tài nguyên" ở section phù hợp.\\
+        & 4. Người dùng chọn "Trắc nghiệm" từ danh sách các hoạt động.\\
+        & 5. Người dùng thiết lập các thông số cho bài kiểm tra.\\
+        & 6. Người dùng nhấn "Lưu và trở về khoá học" và quay về trang chính của khoá học.\\
+        & 7. Người dùng chọn thẻ bài kiểm tra vừa tạo.\\
+        & 8. Người dùng chọn "Thêm câu hỏi" để thêm câu hỏi vào bài kiểm tra.\\\hline
+        Alternative flows &
+        A1. Tại bước 6:\\
+        & 6.1. Người dùng chọn "Lưu và cho xem" và được điều hướng đến trang "Thêm câu hỏi".\\
+        & Thực hiện tiếp tục bước 8 trên Normal flow.\\
+        \\\hline
+        Exception flows &
+        E1. Tại bước 5:\\
+        & 5.1. Người dùng không nhập tên bài kiểm tra.\\
+        & Thực hiện tiếp tục bước 6. Hệ thống sẽ hiển thị lỗi "You must supply a value here.". Quay lại bước 5 trên Normal flow.\\\hline
+    \end{tabular}
+    \caption{Use case: Create quiz}
+    \label{tab:create-quiz}
+\end{table}
+
+\subsubsection{Activity diagram}
+\subsubsection{Sử dụng phương pháp Boundary value analysis để kiểm thử}
+\subsubsection{Sử dụng phương pháp Equivalence class partitioning}
+\subsubsection{Sử dụng phương pháp Decision table để kiểm thử}
+\subsubsection{Sử dụng phương pháp Use-case testing để kiểm thử}
+
+\subsection{Chức năng Nhắn tin (Send message)}
+\subsubsection{Use case}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|p{11cm}|}
+        \hline
+        Category & Description \\
+        \hline
+        Use case name & Send message \\
+        \hline
+        Actor & Sinh viên \\
+        \hline
+        Assumption & Người dùng đang ở đường dẫn \url{https://sandbox.moodledemo.net/}. Ngôn ngữ của trang web được chỉnh là Tiếng Việt. Người dùng đăng nhập thành công dưới tài khoản sinh viên. Người dùng đang ở trang "Trang chủ".\\\hline
+        Normal flow & 
+        1. Người dùng toggle menu ở góc trái trên trang web. \\
+        & 2. Người dùng chọn mục "Tin nhắn" ở menu. \\
+        & 3. Người dùng tìm kiếm tên của người cần nhắn tin.\\
+        & 4. Người dùng nhập nội dung tin nhắn vào ô "Write a message".\\
+        & 5. Người dùng bấm ký tự gửi tin nhắn.\\\hline
+        Alternative flows &
+        A1. Tại bước 1:\\
+        & 1.1. Người dùng chọn ký tự message trên header.\\
+        & Thực hiện tiếp tục bước 3 trên Normal flow.\\
+        \\\hline
+        Exception flows &
+        E1. Tại bước 3:\\
+        & 3.1. Người dùng không tìm thấy tên người cần nhắn.\\
+        & Thực hiện lại bước 3, kiểm tra chính tả. Sau khi tìm thấy người cần nhắn thì tiếp tục bước 4 trên Normal flow.\\\hline
+    \end{tabular}
+    \caption{Use case: Send message}
+    \label{tab:send-message}
+\end{table}
+
 \subsubsection{Activity diagram}
 \subsubsection{Sử dụng phương pháp Boundary value analysis để kiểm thử}
 \subsubsection{Sử dụng phương pháp Equivalence class partitioning}
