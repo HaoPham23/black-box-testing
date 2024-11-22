@@ -367,7 +367,7 @@ Kết quả cuộc họp:
         \hline
         Actor & Giáo viên \\
         \hline
-        Assumption & Người dùng đang ở đường dẫn \url{https://sandbox.moodledemo.net/}. Ngôn ngữ của trang web được chỉnh là Tiếng Việt. Người dùng đăng nhập thành công dưới tài khoản giáo viên. Người dùng đang ở trang "Trang chủ".\\\hline
+        Assumption & Người dùng đang ở đường dẫn \url{https://sandbox.moodledemo.net/}. Ngôn ngữ của trang web được chỉnh là Tiếng Việt. Người dùng đăng nhập thành công dưới tài khoản giáo viên. Người dùng đang ở trang "Trang chủ". Có ít nhất một khoá học.\\\hline
         Normal flow & 
         1. Người dùng chọn Khoá học cần tạo bài kiểm tra. \\
         & 2. Người dùng bật "Chế độ chỉnh sửa" ở góc phải trên trang web. \\
@@ -393,8 +393,41 @@ Kết quả cuộc họp:
 
 \subsubsection{Activity diagram}
 \subsubsection{Sử dụng phương pháp Boundary value analysis để kiểm thử}
+Ta chọn Normal Boundary Value testing, thay đổi input ở bước 5 dựa theo domain như sau:
+\begin{itemize}
+    \item "Tên": Gồm các ký tự in được. Ký hiệu độ dài là $x$, ta có $1 \leq x$. Để phù hợp với thực tế, ta cũng set giá trị $x$ tối đa là 200. Tóm lại, ta có $1 \leq x \leq 200$.
+\end{itemize}
+
 \subsubsection{Sử dụng phương pháp Equivalence class partitioning}
+Thực hiện Weak Normal Equivalence Class Testing, chia input ở bước 5 thành các equivalence class như sau:
+\begin{itemize}
+    \item "Tên": Giống như ở phần Boundary Value Testing, ta chia thành 1 class: $1 \leq x \leq 200$.
+\end{itemize}
 \subsubsection{Sử dụng phương pháp Decision table để kiểm thử}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|p{5cm}|c|c|c|c|}
+        \hline
+        \textbf{Điều kiện} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} \\
+        \hline
+        c1. Đã bật chế độ chỉnh sửa & Có & Có & Không & Không \\
+        \hline
+        c2. Đã nhập tên bài kiểm tra hợp lệ ($1 \leq x \leq 200$) & Có & Không & Có & Không \\
+        \hline
+        \hline
+        \textbf{a1. Cho phép tạo bài kiểm tra} & x & & & \\
+        \hline
+        \textbf{a2. Hiển thị lỗi yêu cầu nhập tên bài kiểm tra} & & x & & \\
+        \hline
+        \textbf{a3. Không hiển thị chỗ tạo bài} & & & x & x \\
+        \hline
+        \textbf{a4. Không hợp lệ} & & &x & \\\hline
+    \end{tabular}
+    \caption{Bảng quyết định kiểm thử chức năng tạo bài kiểm tra}
+    \label{tab:decision-table-create-quiz}
+\end{table}
+
 \subsubsection{Sử dụng phương pháp Use-case testing để kiểm thử}
 
 \subsection{Chức năng Nhắn tin (Send message)}
@@ -433,8 +466,40 @@ Kết quả cuộc họp:
 
 \subsubsection{Activity diagram}
 \subsubsection{Sử dụng phương pháp Boundary value analysis để kiểm thử}
+Ta chọn Normal Boundary Value testing, thay đổi input ở bước 4 dựa theo domain như sau:
+\begin{itemize}
+    \item "Nội dung": Gồm các ký tự in được. Ký hiệu độ dài là $x$, ta có $1 \leq x$. Để phù hợp với thực tế, ta cũng set giá trị $x$ tối đa là 500. Tóm lại, ta có $1 \leq x \leq 500$.
+\end{itemize}
+
 \subsubsection{Sử dụng phương pháp Equivalence class partitioning}
+Thực hiện Weak Normal Equivalence Class Testing, chia input ở bước 5 thành các equivalence class như sau:
+\begin{itemize}
+    \item "Tên": Giống như ở phần Boundary Value Testing, ta chia thành 1 class: $1 \leq x \leq 500$.
+\end{itemize}
 \subsubsection{Sử dụng phương pháp Decision table để kiểm thử}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|c|c|c|c|}
+        \hline
+        \textbf{Điều kiện} & \textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} \\
+        \hline
+        c1. Người dùng tìm thấy tên người cần nhắn & Có & Không & Có & Không \\
+        \hline
+        c2. Nội dung tin nhắn hợp lệ ($1 \leq x \leq 500$) & Có & Có & Không & Không \\\hline
+        \hline
+        \textbf{a1. Cho phép gửi tin nhắn} & x & & & \\
+        \hline
+        \textbf{a2. Không hiển thị kết quả tìm kiếm} & & x & &x \\
+        \hline
+        \textbf{a3. Hiển thị lỗi nội dung tin nhắn} & & &x & \\\hline
+        \textbf{a4. Không hợp lệ} & &x & & \\
+        \hline
+    \end{tabular}
+    \caption{Bảng quyết định kiểm thử chức năng nhắn tin}
+    \label{tab:decision-table}
+\end{table}
+
 \subsubsection{Sử dụng phương pháp Use-case testing để kiểm thử}
 
 \section{Tổng kết}
