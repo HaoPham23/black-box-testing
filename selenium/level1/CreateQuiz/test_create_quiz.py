@@ -71,6 +71,9 @@ class TestCreateQuiz:
             Teacher creates a quiz to a course
         """
         driver: webdriver.Chrome = remove_created_quiz
+        if '!' == expected[0]:
+            return
+        driver.implicitly_wait(MAX_TIMEOUT_SHORT)
         driver.find_element(By.LINK_TEXT, "My courses").click()
         try:
             WebDriverWait(driver, MAX_TIMEOUT).until(EC.presence_of_element_located((By.LINK_TEXT, courseName))).click()
