@@ -8,3 +8,4 @@ main.toc
 *.log
 *.toc
 __pycache__/
+.pytest_cache/

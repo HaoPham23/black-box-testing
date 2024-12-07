@@ -1,8 +1,65 @@
 [
     {
         "id": "CQ-001-0001",
-        "courseName": "My First Course",
+        "courseName": "My first course",
         "quizName": "A",
-        "expected": "//span[contains(text(), 'A')]"
+        "returnButtonText": "Save and return to course",
+        "expected": "//div[@data-activityname = 'A']"
+    },
+    {
+        "id": "CQ-001-0002",
+        "courseName": "My first course",
+        "quizName": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "returnButtonText": "Save and return to course",
+        "expected": "//div[@data-activityname = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA']"
+    },
+    {
+        "id": "CQ-001-0003",
+        "courseName": "My first course",
+        "quizName": "AA",
+        "returnButtonText": "Save and return to course",
+        "expected": "//div[@data-activityname = 'AA']"
+    },
+    {
+        "id": "CQ-001-0004",
+        "courseName": "My first course",
+        "quizName": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "returnButtonText": "Save and return to course",
+        "expected": "//div[@data-activityname = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA']"
+    },
+    {
+        "id": "CQ-001-0005",
+        "courseName": "My first course",
+        "quizName": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "returnButtonText": "Save and return to course",
+        "expected": "//div[@data-activityname = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA']"
+    },
+    {
+        "id": "CQ-002-0001",
+        "courseName": "My first course",
+        "quizName": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "returnButtonText": "Save and return to course",
+        "expected": "//div[@data-activityname = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA']"
+    },
+    {
+        "id": "CQ-003-0001",
+        "courseName": "My first course",
+        "quizName": "",
+        "returnButtonText": "Save and return to course",
+        "expected": "//div[@class='form-control-feedback invalid-feedback']"
+    },
+    {
+        "id": "CQ-003-0002",
+        "courseName": "My first course",
+        "quizName": "",
+        "returnButtonText": "",
+        "expected": "!//span[contains(text(), 'Add an activity or resource')]"
+    },
+    {
+        "id": "CQ-004-0001",
+        "courseName": "My first course",
+        "quizName": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "returnButtonText": "Save and display",
+        "expected": "//div[@data-activityname = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA']"
     }
-  ]
+]
