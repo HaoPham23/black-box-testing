@@ -1,0 +1,28 @@
+{
+  "test_files": [
+    {
+      "file_path": "D:\\0byte.txt",
+      "expected_message": "The file '0byte.txt' is either empty or a folder. To upload folders zip them first."
+    },
+    {
+      "file_path": "D:\\1byte.txt",
+      "expected_message": "Changes saved"
+    },
+    {
+      "file_path": "D:\\2byte.txt",
+      "expected_message": "Changes saved"
+    },
+    {
+      "file_path": "D:\\3mb.txt",
+      "expected_message": "Changes saved"
+    },
+    {
+      "file_path": "D:\\200mb.pdf",
+      "expected_message": "The file '200mb.pdf' exceeds the limit of 100MB"
+    },
+    {
+      "file_path": "D:\\100mb_1byte.jpg",
+      "expected_message": "Changes saved"
+    }
+  ]
+}

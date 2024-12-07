@@ -1,0 +1,58 @@
+{
+  "url": "https://school.moodledemo.net/",
+  "window_size": {
+    "width": 1296,
+    "height": 696
+  },
+  "credentials": {
+    "username": "amandahamilto205",
+    "password": "moodle"
+  },
+  "selectors": {
+    "login_link": "Log in",
+    "username_field": "username",
+    "password_field": "password",
+    "login_button": "loginbtn",
+    "user_menu": "user-menu-toggle",
+    "private_files": "Private files",
+    "add_file_button": "div.fp-btn-add > a",
+    "file_input": "//input[@type='file']",
+    "upload_button": "button.fp-upload-btn.btn-primary.btn",
+    "error_message": "div.moodle-exception-message",
+    "submit_button": "input.btn.btn-primary[name='submitbutton']",
+    "toast_message": "div.toast-message.px-1"
+  },
+  "timeouts": {
+    "error_wait": 3,
+    "element_wait": 10,
+    "small_file_wait": 15,
+    "large_file_wait": 2700
+  },
+  "file_size_threshold": 90000000,
+  "test_files": [
+    {
+      "file_path": "D:\\0byte.txt",
+      "expected_message": "The file '0byte.txt' is either empty or a folder. To upload folders zip them first."
+    },
+    {
+      "file_path": "D:\\1byte.txt",
+      "expected_message": "Changes saved"
+    },
+    {
+      "file_path": "D:\\2byte.txt",
+      "expected_message": "Changes saved"
+    },
+    {
+      "file_path": "D:\\3mb.txt",
+      "expected_message": "Changes saved"
+    },
+    {
+      "file_path": "D:\\200mb.pdf",
+      "expected_message": "The file '200mb.pdf' exceeds the limit of 100MB"
+    },
+    {
+      "file_path": "D:\\100mb_1byte.jpg",
+      "expected_message": "Changes saved"
+    }
+  ]
+}
