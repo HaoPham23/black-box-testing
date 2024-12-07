@@ -1,0 +1,8 @@
+[
+    {
+        "id": "CQ-001-0001",
+        "courseName": "My First Course",
+        "quizName": "A",
+        "expected": "//span[contains(text(), 'A')]"
+    }
+  ]
