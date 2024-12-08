@@ -1,0 +1,34 @@
+[
+    {
+      "str": "",
+      "list_course": ["Feline Welfare", "Cross-cultural Communication", "Effective Memory Techniques", "Mindful course creation", "Critical Thinking: Develop your skills", "Activity Examples", "Psychology in Cinema", "History: Russia in Revolution", "Literature of France 1100 - 1960", "Votes for Women!", "English: The Lake Poets", "Moodle and Mountaineering", "Class and Conflict in World Cinema", "Celebrating Cultures", "Types of Sport", "World of Water", "English with H5P", "Revision: Chemistry", "The Impressionists", "Mystère à Hyères", "Junior Geography: Where's Matt?", "Junior Mathematics"]
+    },
+    {
+      "str": "A",
+      "list_course": ["Feline Welfare",
+      "Cross-cultural Communication",
+      "Digital Literacy",
+      "Mindful course creation",
+      "Critical Thinking: Develop your skills",
+      "Activity Examples",
+      "Psychology in Cinema",
+      "History: Russia in Revolution",
+      "Literature of France 1100 - 1960",
+      "English: The Lake Poets",
+      "Moodle and Mountaineering",
+      "Class and Conflict in World Cinema",
+      "Celebrating Cultures",
+      "World of Water",
+      "Junior Geography: Where's Matt?",
+      "Junior Mathematics"]
+    },
+    {
+        "str": "math",
+        "list_course": ["Junior Mathematics"]
+    },
+    {
+        "str": "sa",
+        "list_course": []
+    }
+  ]
+  

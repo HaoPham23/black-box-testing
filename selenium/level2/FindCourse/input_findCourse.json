@@ -1,0 +1,340 @@
+[
+    {
+        "test_case": "Find Course Test 1",
+        "search_str": "",
+        "expected_courses": ["Feline Welfare", "Cross-cultural Communication", "Effective Memory Techniques", "Mindful course creation", "Critical Thinking: Develop your skills", "Activity Examples", "Psychology in Cinema", "History: Russia in Revolution", "Literature of France 1100 - 1960", "Votes for Women!", "English: The Lake Poets", "Moodle and Mountaineering", "Class and Conflict in World Cinema", "Celebrating Cultures", "Types of Sport", "World of Water", "English with H5P", "Revision: Chemistry", "The Impressionists", "Mystère à Hyères", "Junior Geography: Where's Matt?", "Junior Mathematics"],
+        "steps": [
+            {
+                "action": "open",
+                "url": "https://school.moodledemo.net/?lang=vi"
+            },
+            {
+                "action": "set_window_size",
+                "width": 838,
+                "height": 816
+            },
+            {
+                "action": "click",
+                "elementType": "LINK_TEXT",
+                "locator": "Đăng nhập"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "ID",
+                "locator": "username",
+                "value": "student"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "ID",
+                "locator": "password",
+                "value": "moodle2024"
+            },
+            {
+                "action": "click",
+                "elementType": "ID",
+                "locator": "loginbtn"
+            },
+            {
+                "action": "click",
+                "elementType": "ID",
+                "locator": "groupingdropdown"
+            },
+            {
+                "action": "click",
+                "elementType": "CSS_SELECTOR",
+                "locator": "a[data-value='all']"
+            },
+            {
+                "action": "click",
+                "elementType": "XPATH",
+                "locator": "//button[@type='button' and @data-action='limit-toggle']"
+            },
+            {
+                "action": "click",
+                "elementType": "LINK_TEXT",
+                "locator": "Tất cả"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "CSS_SELECTOR",
+                "locator": "input[data-region='input'][data-action='search']",
+                "value": ""
+            },
+            {
+                "action": "wait",
+                "seconds": 5
+            },
+            {
+                "action": "validate_courses",
+                "locator": "//span[contains(@class, 'multiline')]//span[@class='sr-only']",
+                "expected": ["Feline Welfare", "Cross-cultural Communication", "Effective Memory Techniques", "Mindful course creation", "Critical Thinking: Develop your skills", "Activity Examples", "Psychology in Cinema", "History: Russia in Revolution", "Literature of France 1100 - 1960", "Votes for Women!", "English: The Lake Poets", "Moodle and Mountaineering", "Class and Conflict in World Cinema", "Celebrating Cultures", "Types of Sport", "World of Water", "English with H5P", "Revision: Chemistry", "The Impressionists", "Mystère à Hyères", "Junior Geography: Where's Matt?", "Junior Mathematics"]
+            }
+        ]
+    },
+    {
+        "test_case": "Find Course Test 2",
+        "search_str": "A",
+        "expected_courses": ["Feline Welfare",
+      "Cross-cultural Communication",
+      "Digital Literacy",
+      "Mindful course creation",
+      "Critical Thinking: Develop your skills",
+      "Activity Examples",
+      "Psychology in Cinema",
+      "History: Russia in Revolution",
+      "Literature of France 1100 - 1960",
+      "English: The Lake Poets",
+      "Moodle and Mountaineering",
+      "Class and Conflict in World Cinema",
+      "Celebrating Cultures",
+      "World of Water",
+      "Junior Geography: Where's Matt?",
+      "Junior Mathematics"],
+        "steps": [
+            {
+                "action": "open",
+                "url": "https://school.moodledemo.net/?lang=vi"
+            },
+            {
+                "action": "set_window_size",
+                "width": 838,
+                "height": 816
+            },
+            {
+                "action": "click",
+                "elementType": "LINK_TEXT",
+                "locator": "Đăng nhập"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "ID",
+                "locator": "username",
+                "value": "student"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "ID",
+                "locator": "password",
+                "value": "moodle2024"
+            },
+            {
+                "action": "click",
+                "elementType": "ID",
+                "locator": "loginbtn"
+            },
+            {
+                "action": "click",
+                "elementType": "ID",
+                "locator": "groupingdropdown"
+            },
+            {
+                "action": "click",
+                "elementType": "CSS_SELECTOR",
+                "locator": "a[data-value='all']"
+            },
+            {
+                "action": "click",
+                "elementType": "XPATH",
+                "locator": "//button[@type='button' and @data-action='limit-toggle']"
+            },
+            {
+                "action": "click",
+                "elementType": "LINK_TEXT",
+                "locator": "Tất cả"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "CSS_SELECTOR",
+                "locator": "input[data-region='input'][data-action='search']",
+                "value": "A"
+            },
+            {
+                "action": "wait",
+                "seconds": 5
+            },
+            {
+                "action": "validate_courses",
+                "locator": "//span[contains(@class, 'multiline')]//span[@class='sr-only']",
+                "expected": ["Feline Welfare",
+      "Cross-cultural Communication",
+      "Digital Literacy",
+      "Mindful course creation",
+      "Critical Thinking: Develop your skills",
+      "Activity Examples",
+      "Psychology in Cinema",
+      "History: Russia in Revolution",
+      "Literature of France 1100 - 1960",
+      "English: The Lake Poets",
+      "Moodle and Mountaineering",
+      "Class and Conflict in World Cinema",
+      "Celebrating Cultures",
+      "World of Water",
+      "Junior Geography: Where's Matt?",
+      "Junior Mathematics"]
+            }
+        ]
+    },
+    {
+        "test_case": "Find Course Test 3",
+        "search_str": "math",
+        "expected_courses": ["Feline Welfare",
+      "Cross-cultural Communication",
+      "Digital Literacy",
+      "Mindful course creation",
+      "Critical Thinking: Develop your skills",
+      "Activity Examples",
+      "Psychology in Cinema",
+      "History: Russia in Revolution",
+      "Literature of France 1100 - 1960",
+      "English: The Lake Poets",
+      "Moodle and Mountaineering",
+      "Class and Conflict in World Cinema",
+      "Celebrating Cultures",
+      "World of Water",
+      "Junior Geography: Where's Matt?",
+      "Junior Mathematics"],
+        "steps": [
+            {
+                "action": "open",
+                "url": "https://school.moodledemo.net/?lang=vi"
+            },
+            {
+                "action": "set_window_size",
+                "width": 838,
+                "height": 816
+            },
+            {
+                "action": "click",
+                "elementType": "LINK_TEXT",
+                "locator": "Đăng nhập"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "ID",
+                "locator": "username",
+                "value": "student"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "ID",
+                "locator": "password",
+                "value": "moodle2024"
+            },
+            {
+                "action": "click",
+                "elementType": "ID",
+                "locator": "loginbtn"
+            },
+            {
+                "action": "click",
+                "elementType": "ID",
+                "locator": "groupingdropdown"
+            },
+            {
+                "action": "click",
+                "elementType": "CSS_SELECTOR",
+                "locator": "a[data-value='all']"
+            },
+            {
+                "action": "click",
+                "elementType": "XPATH",
+                "locator": "//button[@type='button' and @data-action='limit-toggle']"
+            },
+            {
+                "action": "click",
+                "elementType": "LINK_TEXT",
+                "locator": "Tất cả"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "CSS_SELECTOR",
+                "locator": "input[data-region='input'][data-action='search']",
+                "value": "math"
+            },
+            {
+                "action": "wait",
+                "seconds": 5
+            },
+            {
+                "action": "validate_courses",
+                "locator": "//span[contains(@class, 'multiline')]//span[@class='sr-only']",
+                "expected": ["Junior Mathematics"]
+            }
+        ]
+    },
+    {
+        "test_case": "Find Course Test 4",
+        "search_str": "sa",
+        "expected_courses": [],
+        "steps": [
+            {
+                "action": "open",
+                "url": "https://school.moodledemo.net/?lang=vi"
+            },
+            {
+                "action": "set_window_size",
+                "width": 838,
+                "height": 816
+            },
+            {
+                "action": "click",
+                "elementType": "LINK_TEXT",
+                "locator": "Đăng nhập"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "ID",
+                "locator": "username",
+                "value": "student"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "ID",
+                "locator": "password",
+                "value": "moodle2024"
+            },
+            {
+                "action": "click",
+                "elementType": "ID",
+                "locator": "loginbtn"
+            },
+            {
+                "action": "click",
+                "elementType": "ID",
+                "locator": "groupingdropdown"
+            },
+            {
+                "action": "click",
+                "elementType": "CSS_SELECTOR",
+                "locator": "a[data-value='all']"
+            },
+            {
+                "action": "click",
+                "elementType": "XPATH",
+                "locator": "//button[@type='button' and @data-action='limit-toggle']"
+            },
+            {
+                "action": "click",
+                "elementType": "LINK_TEXT",
+                "locator": "Tất cả"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "CSS_SELECTOR",
+                "locator": "input[data-region='input'][data-action='search']",
+                "value": "sa"
+            },
+            {
+                "action": "wait",
+                "seconds": 5
+            },
+            {
+                "action": "validate_courses",
+                "locator": "//span[contains(@class, 'multiline')]//span[@class='sr-only']",
+                "expected": []
+            }
+        ]
+    }
+
+]
