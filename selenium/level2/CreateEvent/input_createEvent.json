@@ -1,0 +1,605 @@
+[
+    {
+        "id": "CE-002-001",
+        "url": "https://sandbox.moodledemo.net/",
+        "tasks": [
+            {"action": "click", "element_type": "id", "locator": "lang-menu-toggle", "value": null},
+            {"action": "click", "element_type": "css", "locator": ".dropdown-item:nth-child(103)", "value": null},
+
+            {"action": "click", "element_type": "link text", "locator": "Đăng nhập", "value": null},
+            {"action": "click", "element_type": "id", "locator": "username", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "manager"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "sandbox24"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+
+            {"action": "click", "element_type": "link text", "locator": "Bảng Điều khiển", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//button[contains(.,'Sự kiện mới')]", "value": null},
+
+            {"action": "click", "element_type": "id", "locator": "id_name", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "id_name", "value": "asd"},
+
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_day", "value": "20"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_month", "value": "tháng 11"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_year", "value": "2024"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_hour", "value": "19"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_minute", "value": "00"},
+            
+            {"action": "click", "element_type": "xpath", "locator": "//a[contains(.,'Show more...')]", "value": null},
+
+            {"action": "click", "element_type": "css", "locator": ".form-check-inline:nth-child(9)", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timedurationminutes", "value": "0"},
+
+            {"action": "click", "element_type": "xpath", "locator": "//button[contains(.,'Lưu')]", "value": null}
+            
+        ],
+        "expected": {
+            "action" : "is_displayed",
+            "element_type": "id",
+            "locator": "fgroup_id_error_durationgroup",
+            "value": "true"
+        }
+    },
+    {
+        "id": "CE-002-002",
+        "url": "https://sandbox.moodledemo.net/",
+        "tasks": [
+            {"action": "click", "element_type": "id", "locator": "lang-menu-toggle", "value": null},
+            {"action": "click", "element_type": "css", "locator": ".dropdown-item:nth-child(103)", "value": null},
+
+            {"action": "click", "element_type": "link text", "locator": "Đăng nhập", "value": null},
+            {"action": "click", "element_type": "id", "locator": "username", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "manager"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "sandbox24"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+
+            {"action": "click", "element_type": "link text", "locator": "Bảng Điều khiển", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//button[contains(.,'Sự kiện mới')]", "value": null},
+
+            {"action": "click", "element_type": "id", "locator": "id_name", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "id_name", "value": "asd"},
+
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_day", "value": "20"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_month", "value": "tháng 11"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_year", "value": "2024"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_hour", "value": "19"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_minute", "value": "00"},
+            
+            {"action": "click", "element_type": "xpath", "locator": "//a[contains(.,'Show more...')]", "value": null},
+
+            {"action": "click", "element_type": "css", "locator": ".form-check-inline:nth-child(9)", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timedurationminutes", "value": "9999"},
+
+            {"action": "click", "element_type": "xpath", "locator": "//button[contains(.,'Lưu')]", "value": null}
+        ],
+        "expected": {
+            "action" : "is_displayed",
+            "element_type": "id",
+            "locator": "id_error_name",
+            "value": "false"
+        }
+    },
+
+    {
+        "id": "CE-002-003",
+        "url": "https://sandbox.moodledemo.net/",
+        "tasks": [
+            {"action": "click", "element_type": "id", "locator": "lang-menu-toggle", "value": null},
+            {"action": "click", "element_type": "css", "locator": ".dropdown-item:nth-child(103)", "value": null},
+
+            {"action": "click", "element_type": "link text", "locator": "Đăng nhập", "value": null},
+            {"action": "click", "element_type": "id", "locator": "username", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "manager"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "sandbox24"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+
+            {"action": "click", "element_type": "link text", "locator": "Bảng Điều khiển", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//button[contains(.,'Sự kiện mới')]", "value": null},
+
+            {"action": "click", "element_type": "id", "locator": "id_name", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "id_name", "value": "asd"},
+
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_day", "value": "20"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_month", "value": "tháng 11"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_year", "value": "2024"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_hour", "value": "19"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_minute", "value": "00"},
+            
+            {"action": "click", "element_type": "xpath", "locator": "//a[contains(.,'Show more...')]", "value": null},
+
+            {"action": "click", "element_type": "css", "locator": ".form-check-inline:nth-child(9)", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timedurationminutes", "value": "999999999999999999"},
+
+            {"action": "click", "element_type": "xpath", "locator": "//button[contains(.,'Lưu')]", "value": null}
+            
+        ],
+        "expected": {
+            "action" : "is_displayed",
+            "element_type": "css",
+            "locator": ".moodle-exception-message",
+            "value": "true"
+        }
+    },
+
+    {
+        "id": "CE-002-004",
+        "url": "https://sandbox.moodledemo.net/",
+        "tasks": [
+            {"action": "click", "element_type": "id", "locator": "lang-menu-toggle", "value": null},
+            {"action": "click", "element_type": "css", "locator": ".dropdown-item:nth-child(103)", "value": null},
+
+            {"action": "click", "element_type": "link text", "locator": "Đăng nhập", "value": null},
+            {"action": "click", "element_type": "id", "locator": "username", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "manager"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "sandbox24"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+
+            {"action": "click", "element_type": "link text", "locator": "Bảng Điều khiển", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//button[contains(.,'Sự kiện mới')]", "value": null},
+
+            {"action": "click", "element_type": "id", "locator": "id_name", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "id_name", "value": "asd"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_day", "value": "20"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_month", "value": "tháng 11"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_year", "value": "2024"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_hour", "value": "19"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_minute", "value": "00"},
+            
+            {"action": "click", "element_type": "xpath", "locator": "//a[contains(.,'Show more...')]", "value": null},
+
+            {"action": "click", "element_type": "id", "locator": "id_duration_1", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timedurationuntil_day", "value": "20"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timedurationuntil_month", "value": "tháng 11"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timedurationuntil_year", "value": "2024"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timedurationuntil_hour", "value": "18"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timedurationuntil_minute", "value": "59"},
+
+            {"action": "click", "element_type": "xpath", "locator": "//button[contains(.,'Lưu')]", "value": null}
+            
+        ],
+        "expected": {
+            "action" : "is_displayed",
+            "element_type": "id",
+            "locator": "fgroup_id_error_durationgroup",
+            "value": "true"
+        }
+    },
+
+    {
+        "id": "CE-002-005",
+        "url": "https://sandbox.moodledemo.net/",
+        "tasks": [
+            {"action": "click", "element_type": "id", "locator": "lang-menu-toggle", "value": null},
+            {"action": "click", "element_type": "css", "locator": ".dropdown-item:nth-child(103)", "value": null},
+
+            {"action": "click", "element_type": "link text", "locator": "Đăng nhập", "value": null},
+            {"action": "click", "element_type": "id", "locator": "username", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "manager"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "sandbox24"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+
+            {"action": "click", "element_type": "link text", "locator": "Bảng Điều khiển", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//button[contains(.,'Sự kiện mới')]", "value": null},
+
+            {"action": "click", "element_type": "id", "locator": "id_name", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "id_name", "value": "asd"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_day", "value": "20"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_month", "value": "tháng 11"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_year", "value": "2024"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_hour", "value": "19"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_minute", "value": "00"},
+            
+            {"action": "click", "element_type": "xpath", "locator": "//a[contains(.,'Show more...')]", "value": null},
+
+            {"action": "click", "element_type": "id", "locator": "id_duration_1", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timedurationuntil_day", "value": "20"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timedurationuntil_month", "value": "tháng 11"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timedurationuntil_year", "value": "2024"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timedurationuntil_hour", "value": "19"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timedurationuntil_minute", "value": "00"},
+
+            {"action": "click", "element_type": "xpath", "locator": "//button[contains(.,'Lưu')]", "value": null}
+            
+        ],
+        "expected": {
+            "action" : "is_displayed",
+            "element_type": "id",
+            "locator": "id_error_name",
+            "value": "false"
+        }
+    },
+    
+    {
+        "id": "CE-002-006",
+        "url": "https://sandbox.moodledemo.net/",
+        "tasks": [
+            {"action": "click", "element_type": "id", "locator": "lang-menu-toggle", "value": null},
+            {"action": "click", "element_type": "css", "locator": ".dropdown-item:nth-child(103)", "value": null},
+
+            {"action": "click", "element_type": "link text", "locator": "Đăng nhập", "value": null},
+            {"action": "click", "element_type": "id", "locator": "username", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "manager"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "sandbox24"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+
+            {"action": "click", "element_type": "link text", "locator": "Bảng Điều khiển", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//button[contains(.,'Sự kiện mới')]", "value": null},
+
+            {"action": "click", "element_type": "id", "locator": "id_name", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "id_name", "value": ""},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_day", "value": "20"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_month", "value": "tháng 11"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_year", "value": "2024"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_hour", "value": "19"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_minute", "value": "00"},
+            
+            {"action": "click", "element_type": "xpath", "locator": "//a[contains(.,'Show more...')]", "value": null},
+
+            {"action": "click", "element_type": "css", "locator": ".form-check-inline:nth-child(9)", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timedurationminutes", "value": "-20"},
+
+            {"action": "click", "element_type": "xpath", "locator": "//button[contains(.,'Lưu')]", "value": null}
+            
+        ],
+        "expected": {
+            "action" : "is_displayed",
+            "element_type": "id",
+            "locator": "id_error_name",
+            "value": "true"
+        }
+    },
+
+    {
+        "id": "CE-002-007",
+        "url": "https://sandbox.moodledemo.net/",
+        "tasks": [
+            {"action": "click", "element_type": "id", "locator": "lang-menu-toggle", "value": null},
+            {"action": "click", "element_type": "css", "locator": ".dropdown-item:nth-child(103)", "value": null},
+
+            {"action": "click", "element_type": "link text", "locator": "Đăng nhập", "value": null},
+            {"action": "click", "element_type": "id", "locator": "username", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "manager"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "sandbox24"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+
+            {"action": "click", "element_type": "link text", "locator": "Bảng Điều khiển", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//button[contains(.,'Sự kiện mới')]", "value": null},
+
+            {"action": "click", "element_type": "id", "locator": "id_name", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "id_name", "value": "asb"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_day", "value": "20"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_month", "value": "tháng 11"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_year", "value": "2024"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_hour", "value": "19"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_minute", "value": "00"},
+            
+            {"action": "click", "element_type": "xpath", "locator": "//a[contains(.,'Show more...')]", "value": null},
+
+            {"action": "click", "element_type": "css", "locator": ".form-check-inline:nth-child(9)", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timedurationminutes", "value": "ab"},
+
+            {"action": "click", "element_type": "xpath", "locator": "//button[contains(.,'Lưu')]", "value": null}
+            
+        ],
+        "expected": {
+            "action" : "is_displayed",
+            "element_type": "id",
+            "locator": "fgroup_id_error_durationgroup",
+            "value": "true"
+        }
+    },
+
+    {
+        "id": "CE-002-008",
+        "url": "https://sandbox.moodledemo.net/",
+        "tasks": [
+            {"action": "click", "element_type": "id", "locator": "lang-menu-toggle", "value": null},
+            {"action": "click", "element_type": "css", "locator": ".dropdown-item:nth-child(103)", "value": null},
+
+            {"action": "click", "element_type": "link text", "locator": "Đăng nhập", "value": null},
+            {"action": "click", "element_type": "id", "locator": "username", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "manager"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "sandbox24"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+
+            {"action": "click", "element_type": "link text", "locator": "Bảng Điều khiển", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//button[contains(.,'Sự kiện mới')]", "value": null},
+
+            {"action": "click", "element_type": "id", "locator": "id_name", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "id_name", "value": ""},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_day", "value": "20"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_month", "value": "tháng 11"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_year", "value": "2024"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_hour", "value": "19"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_minute", "value": "00"},
+            
+            {"action": "click", "element_type": "xpath", "locator": "//a[contains(.,'Show more...')]", "value": null},
+
+            {"action": "click", "element_type": "css", "locator": ".form-check-inline:nth-child(9)", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timedurationminutes", "value": "2"},
+
+            {"action": "click", "element_type": "xpath", "locator": "//button[contains(.,'Lưu')]", "value": null}
+            
+        ],
+        "expected": {
+            "action" : "is_displayed",
+            "element_type": "id",
+            "locator": "id_error_name",
+            "value": "true"
+        }
+    },
+
+    {
+        "id": "CE-002-008",
+        "url": "https://sandbox.moodledemo.net/",
+        "tasks": [
+            {"action": "click", "element_type": "id", "locator": "lang-menu-toggle", "value": null},
+            {"action": "click", "element_type": "css", "locator": ".dropdown-item:nth-child(103)", "value": null},
+
+            {"action": "click", "element_type": "link text", "locator": "Đăng nhập", "value": null},
+            {"action": "click", "element_type": "id", "locator": "username", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "manager"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "sandbox24"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+
+            {"action": "click", "element_type": "link text", "locator": "Bảng Điều khiển", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//button[contains(.,'Sự kiện mới')]", "value": null},
+
+            {"action": "click", "element_type": "id", "locator": "id_name", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "id_name", "value": "#$ab"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_day", "value": "20"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_month", "value": "tháng 11"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_year", "value": "2024"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_hour", "value": "19"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_minute", "value": "00"},
+            
+            {"action": "click", "element_type": "xpath", "locator": "//a[contains(.,'Show more...')]", "value": null},
+
+            {"action": "click", "element_type": "css", "locator": ".form-check-inline:nth-child(9)", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timedurationminutes", "value": "100"},
+
+            {"action": "click", "element_type": "xpath", "locator": "//button[contains(.,'Lưu')]", "value": null}
+            
+        ],
+        "expected": {
+            "action" : "is_displayed",
+            "element_type": "id",
+            "locator": "id_error_name",
+            "value": "false"
+        }
+    },
+
+    {
+        "id": "CE-002-009",
+        "url": "https://sandbox.moodledemo.net/",
+        "tasks": [
+            {"action": "click", "element_type": "id", "locator": "lang-menu-toggle", "value": null},
+            {"action": "click", "element_type": "css", "locator": ".dropdown-item:nth-child(103)", "value": null},
+
+            {"action": "click", "element_type": "link text", "locator": "Đăng nhập", "value": null},
+            {"action": "click", "element_type": "id", "locator": "username", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "manager"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "sandbox24"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+
+            {"action": "click", "element_type": "link text", "locator": "Bảng Điều khiển", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//button[contains(.,'Sự kiện mới')]", "value": null},
+
+            {"action": "click", "element_type": "id", "locator": "id_name", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "id_name", "value": "%ˆ&&%ˆ"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_day", "value": "22"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_month", "value": "tháng 11"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_year", "value": "2024"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_hour", "value": "06"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_minute", "value": "00"},
+            
+            {"action": "click", "element_type": "xpath", "locator": "//a[contains(.,'Show more...')]", "value": null},
+
+            {"action": "click", "element_type": "id", "locator": "id_duration_1", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timedurationuntil_day", "value": "22"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timedurationuntil_month", "value": "tháng 11"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timedurationuntil_year", "value": "2023"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timedurationuntil_hour", "value": "06"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timedurationuntil_minute", "value": "00"},
+
+            {"action": "click", "element_type": "xpath", "locator": "//button[contains(.,'Lưu')]", "value": null}
+            
+        ],
+        "expected": {
+            "action" : "is_displayed",
+            "element_type": "id",
+            "locator": "id_error_name",
+            "value": "false"
+        }
+    },
+
+    {
+        "id": "CE-002-010",
+        "url": "https://sandbox.moodledemo.net/",
+        "tasks": [
+            {"action": "click", "element_type": "id", "locator": "lang-menu-toggle", "value": null},
+            {"action": "click", "element_type": "css", "locator": ".dropdown-item:nth-child(103)", "value": null},
+
+            {"action": "click", "element_type": "link text", "locator": "Đăng nhập", "value": null},
+            {"action": "click", "element_type": "id", "locator": "username", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "manager"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "sandbox24"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+
+            {"action": "click", "element_type": "link text", "locator": "Bảng Điều khiển", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//button[contains(.,'Sự kiện mới')]", "value": null},
+
+            {"action": "click", "element_type": "id", "locator": "id_name", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "id_name", "value": "%ˆ&&%ˆ"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_day", "value": "22"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_month", "value": "tháng 11"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_year", "value": "2024"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_hour", "value": "06"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_minute", "value": "00"},
+            
+            {"action": "click", "element_type": "xpath", "locator": "//a[contains(.,'Show more...')]", "value": null},
+
+            {"action": "click", "element_type": "id", "locator": "id_duration_1", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timedurationuntil_day", "value": "22"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timedurationuntil_month", "value": "tháng 11"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timedurationuntil_year", "value": "2023"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timedurationuntil_hour", "value": "06"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timedurationuntil_minute", "value": "00"},
+
+            {"action": "click", "element_type": "xpath", "locator": "//button[contains(.,'Lưu')]", "value": null}
+            
+        ],
+        "expected": {
+            "action" : "is_displayed",
+            "element_type": "id",
+            "locator": "fgroup_id_error_durationgroup",
+            "value": "true"
+        }
+    },
+
+    {
+        "id": "CE-002-011",
+        "url": "https://sandbox.moodledemo.net/",
+        "tasks": [
+            {"action": "click", "element_type": "id", "locator": "lang-menu-toggle", "value": null},
+            {"action": "click", "element_type": "css", "locator": ".dropdown-item:nth-child(103)", "value": null},
+
+            {"action": "click", "element_type": "link text", "locator": "Đăng nhập", "value": null},
+            {"action": "click", "element_type": "id", "locator": "username", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "manager"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "sandbox24"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+
+            {"action": "click", "element_type": "link text", "locator": "Bảng Điều khiển", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//button[contains(.,'Sự kiện mới')]", "value": null},
+
+            {"action": "click", "element_type": "id", "locator": "id_name", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "id_name", "value": "#$ab"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_day", "value": "22"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_month", "value": "tháng 11"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_year", "value": "2024"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_hour", "value": "07"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_minute", "value": "56"},
+            
+            {"action": "click", "element_type": "xpath", "locator": "//a[contains(.,'Show more...')]", "value": null},
+
+            {"action": "click", "element_type": "id", "locator": "id_duration_1", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timedurationuntil_day", "value": "22"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timedurationuntil_month", "value": "tháng 11"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timedurationuntil_year", "value": "2024"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timedurationuntil_hour", "value": "08"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timedurationuntil_minute", "value": "56"},
+
+            {"action": "click", "element_type": "xpath", "locator": "//button[contains(.,'Lưu')]", "value": null}
+            
+        ],
+        "expected": {
+            "action" : "is_displayed",
+            "element_type": "id",
+            "locator": "id_error_name",
+            "value": "true"
+        }
+    },
+
+    {
+        "id": "CE-002-012",
+        "url": "https://sandbox.moodledemo.net/",
+        "tasks": [
+            {"action": "click", "element_type": "id", "locator": "lang-menu-toggle", "value": null},
+            {"action": "click", "element_type": "css", "locator": ".dropdown-item:nth-child(103)", "value": null},
+
+            {"action": "click", "element_type": "link text", "locator": "Đăng nhập", "value": null},
+            {"action": "click", "element_type": "id", "locator": "username", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "manager"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "sandbox24"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+
+            {"action": "click", "element_type": "link text", "locator": "Bảng Điều khiển", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//button[contains(.,'Sự kiện mới')]", "value": null},
+
+            {"action": "click", "element_type": "id", "locator": "id_name", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "id_name", "value": ""},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_day", "value": "23"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_month", "value": "tháng 11"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_year", "value": "2024"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_hour", "value": "10"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_minute", "value": "30"},
+            
+            {"action": "click", "element_type": "xpath", "locator": "//a[contains(.,'Show more...')]", "value": null},
+
+            {"action": "click", "element_type": "id", "locator": "id_duration_1", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timedurationuntil_day", "value": "23"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timedurationuntil_month", "value": "tháng 10"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timedurationuntil_year", "value": "2023"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timedurationuntil_hour", "value": "06"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timedurationuntil_minute", "value": "00"},
+
+            {"action": "click", "element_type": "xpath", "locator": "//button[contains(.,'Lưu')]", "value": null}
+            
+        ],
+        "expected": {
+            "action" : "is_displayed",
+            "element_type": "id",
+            "locator": "id_error_name",
+            "value": "false"
+        }
+    },
+
+    {
+        "id": "CE-002-013",
+        "url": "https://sandbox.moodledemo.net/",
+        "tasks": [
+            {"action": "click", "element_type": "id", "locator": "lang-menu-toggle", "value": null},
+            {"action": "click", "element_type": "css", "locator": ".dropdown-item:nth-child(103)", "value": null},
+
+            {"action": "click", "element_type": "link text", "locator": "Đăng nhập", "value": null},
+            {"action": "click", "element_type": "id", "locator": "username", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "manager"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "sandbox24"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+
+            {"action": "click", "element_type": "link text", "locator": "Bảng Điều khiển", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//button[contains(.,'Sự kiện mới')]", "value": null},
+
+            {"action": "click", "element_type": "id", "locator": "id_name", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "id_name", "value": ""},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_day", "value": "23"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_month", "value": "tháng 11"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_year", "value": "2024"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_hour", "value": "10"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timestart_minute", "value": "30"},
+            
+            {"action": "click", "element_type": "xpath", "locator": "//a[contains(.,'Show more...')]", "value": null},
+
+            {"action": "click", "element_type": "id", "locator": "id_duration_1", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timedurationuntil_day", "value": "23"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timedurationuntil_month", "value": "tháng 10"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timedurationuntil_year", "value": "2025"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timedurationuntil_hour", "value": "10"},
+            {"action": "send_keys", "element_type": "id", "locator": "id_timedurationuntil_minute", "value": "40"},
+
+            {"action": "click", "element_type": "xpath", "locator": "//button[contains(.,'Lưu')]", "value": null}
+            
+        ],
+        "expected": {
+            "action" : "is_displayed",
+            "element_type": "id",
+            "locator": "id_error_name",
+            "value": "true"
+        }
+    }
+    
+]
