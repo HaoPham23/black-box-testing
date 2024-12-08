@@ -36,3 +36,27 @@ Selenium được lựa chọn làm công cụ kiểm thử tự động trong n
 Selenium phù hợp với các dự án yêu cầu kiểm thử tự động ở quy mô lớn, đặc biệt là các ứng dụng web cần đảm bảo hoạt động ổn định trên nhiều môi trường khác nhau.
 
 \subsection{Cấu trúc bài báo cáo}
+Bài báo cáo bao gồm bốn phần chính:
+\begin{itemize}
+    \item \textbf{Phần 1: Giới thiệu}: Trình bày về Selenium, các thành phần và tính năng chính; lý do chọn Selenium làm công cụ kiểm thử tự động; Cấu trúc bài báo cáo; Mô tả môi trường kiểm thử.
+    \item \textbf{Phần 2: Mô tả}: Trình bày về các chức năng cần kiểm thử, mô tả cách hiện thực chương trình kiểm thử tự động  và dữ liệu input của chương trình ở cả 2 levels.
+    \item \textbf{Phần 3: Kết quả}: Trình bày kết quả kiểm thử của chương trình.
+\end{itemize}
+
+\subsection{Môi trường và cách thiết lập kiểm thử}
+\subsubsection{Môi trường kiểm thử}
+Môi trường kiểm thử bao gồm:
+\begin{itemize}
+    \item \textbf{Hệ điều hành}: Windows 10 và macOS Sonoma 14.7
+    \item \textbf{Trình duyệt}: Google Chrome 131.0.6778.109
+    \item \textbf{Ngôn ngữ lập trình}: Python 3.13.0
+    \item \textbf{Công cụ kiểm thử}: Selenium 4.26.1
+\end{itemize}
+
+\subsubsection{Cách thiết lập kiểm thử}
+
+Các bước thiết lập kiểm thử:
+\begin{enumerate}
+    \item Install packages: \texttt{pip install selenium pytest}
+    \item Chạy lệnh pytest với từng tính năng và level, ví dụ với tính năng Create Quiz level 1, ta chạy lệnh: \texttt{pytest level1/CreateQuiz}
+\end{enumerate}
