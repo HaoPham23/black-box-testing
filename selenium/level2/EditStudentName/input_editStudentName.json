@@ -1,0 +1,624 @@
+[
+    {
+        "test_case": "Test case 1",
+        "last_name": "John",
+        "first_name": "Kamala",
+        "error_lastname": "",
+        "error_firstname": "",
+        "steps": [
+            {
+                "action": "open",
+                "url": "https://school.moodledemo.net/?lang=vi"
+            },
+            {
+                "action": "set_window_size",
+                "width": 838,
+                "height": 816
+            },
+            {
+                "action": "click",
+                "elementType": "LINK_TEXT",
+                "locator": "Đăng nhập"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "ID",
+                "locator": "username",
+                "value": "student"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "ID",
+                "locator": "password",
+                "value": "moodle2024"
+            },
+            {
+                "action": "click",
+                "elementType": "ID",
+                "locator": "loginbtn"
+            },
+            {
+                "action": "click",
+                "elementType": "ID",
+                "locator": "user-menu-toggle"
+            },
+            {
+                "action": "click",
+                "elementType": "LINK_TEXT",
+                "locator": "Hồ sơ"
+            },
+            {
+                "action": "click",
+                "elementType": "LINK_TEXT",
+                "locator": "Sửa hồ sơ cá nhân"
+            },
+            {
+                "action": "clear",
+                "elementType": "ID",
+                "locator": "id_firstname"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "ID",
+                "locator": "id_firstname",
+                "value": "Kamala"
+            },
+            {
+                "action": "clear",
+                "elementType": "ID",
+                "locator": "id_lastname"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "ID",
+                "locator": "id_lastname",
+                "value": "John"
+            },
+            {
+                "action": "click",
+                "elementType": "ID",
+                "locator": "id_submitbutton"
+            },
+            {
+                "action": "assert_text",
+                "elementType": "CSS_SELECTOR",
+                "locator": ".h2",
+                "value": "Kamala John"
+            }
+        ]
+    },
+    {
+        "test_case": "Test case 2",
+        "last_name": "Smith",
+        "first_name": "",
+        "error_firstname": "- Xin cho biết tên và tên đệm",
+        "error_lastname": "",
+        "steps": [
+            {
+                "action": "open",
+                "url": "https://school.moodledemo.net/?lang=vi"
+            },
+            {
+                "action": "set_window_size",
+                "width": 838,
+                "height": 816
+            },
+            {
+                "action": "click",
+                "elementType": "LINK_TEXT",
+                "locator": "Đăng nhập"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "ID",
+                "locator": "username",
+                "value": "student"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "ID",
+                "locator": "password",
+                "value": "moodle2024"
+            },
+            {
+                "action": "click",
+                "elementType": "ID",
+                "locator": "loginbtn"
+            },
+            {
+                "action": "click",
+                "elementType": "ID",
+                "locator": "user-menu-toggle"
+            },
+            {
+                "action": "click",
+                "elementType": "LINK_TEXT",
+                "locator": "Hồ sơ"
+            },
+            {
+                "action": "click",
+                "elementType": "LINK_TEXT",
+                "locator": "Sửa hồ sơ cá nhân"
+            },
+            {
+                "action": "clear",
+                "elementType": "ID",
+                "locator": "id_firstname"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "ID",
+                "locator": "id_firstname",
+                "value": ""
+            },
+            {
+                "action": "clear",
+                "elementType": "ID",
+                "locator": "id_lastname"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "ID",
+                "locator": "id_lastname",
+                "value": "Smith"
+            },
+            {
+                "action": "click",
+                "elementType": "ID",
+                "locator": "id_submitbutton"
+            },
+            {
+                "action": "assert_text",
+                "elementType": "ID",
+                "locator": "id_error_firstname",
+                "value": "- Xin cho biết tên và tên đệm"
+            }
+        ]
+    },
+    {
+        "test_case": "Test case 3",
+        "last_name": "",
+        "first_name": "Emily",
+        "error_firstname": "",
+        "error_lastname": "- Xin cho biết họ",
+        "steps": [
+            {
+                "action": "open",
+                "url": "https://school.moodledemo.net/?lang=vi"
+            },
+            {
+                "action": "set_window_size",
+                "width": 838,
+                "height": 816
+            },
+            {
+                "action": "click",
+                "elementType": "LINK_TEXT",
+                "locator": "Đăng nhập"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "ID",
+                "locator": "username",
+                "value": "student"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "ID",
+                "locator": "password",
+                "value": "moodle2024"
+            },
+            {
+                "action": "click",
+                "elementType": "ID",
+                "locator": "loginbtn"
+            },
+            {
+                "action": "click",
+                "elementType": "ID",
+                "locator": "user-menu-toggle"
+            },
+            {
+                "action": "click",
+                "elementType": "LINK_TEXT",
+                "locator": "Hồ sơ"
+            },
+            {
+                "action": "click",
+                "elementType": "LINK_TEXT",
+                "locator": "Sửa hồ sơ cá nhân"
+            },
+            {
+                "action": "clear",
+                "elementType": "ID",
+                "locator": "id_firstname"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "ID",
+                "locator": "id_firstname",
+                "value": "Emily"
+            },
+            {
+                "action": "clear",
+                "elementType": "ID",
+                "locator": "id_lastname"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "ID",
+                "locator": "id_lastname",
+                "value": ""
+            },
+            {
+                "action": "click",
+                "elementType": "ID",
+                "locator": "id_submitbutton"
+            },
+            {
+                "action": "assert_text",
+                "elementType": "ID",
+                "locator": "id_error_lastname",
+                "value": "- Xin cho biết họ"
+            }
+        ]
+    },
+    {
+        "test_case": "Test case 4",
+        "last_name": "",
+        "first_name": "",
+        "error_firstname": "- Xin cho biết tên và tên đệm",
+        "error_lastname": "- Xin cho biết họ",
+        "steps": [
+            {
+                "action": "open",
+                "url": "https://school.moodledemo.net/?lang=vi"
+            },
+            {
+                "action": "set_window_size",
+                "width": 838,
+                "height": 816
+            },
+            {
+                "action": "click",
+                "elementType": "LINK_TEXT",
+                "locator": "Đăng nhập"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "ID",
+                "locator": "username",
+                "value": "student"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "ID",
+                "locator": "password",
+                "value": "moodle2024"
+            },
+            {
+                "action": "click",
+                "elementType": "ID",
+                "locator": "loginbtn"
+            },
+            {
+                "action": "click",
+                "elementType": "ID",
+                "locator": "user-menu-toggle"
+            },
+            {
+                "action": "click",
+                "elementType": "LINK_TEXT",
+                "locator": "Hồ sơ"
+            },
+            {
+                "action": "click",
+                "elementType": "LINK_TEXT",
+                "locator": "Sửa hồ sơ cá nhân"
+            },
+            {
+                "action": "clear",
+                "elementType": "ID",
+                "locator": "id_firstname"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "ID",
+                "locator": "id_firstname",
+                "value": ""
+            },
+            {
+                "action": "clear",
+                "elementType": "ID",
+                "locator": "id_lastname"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "ID",
+                "locator": "id_lastname",
+                "value": ""
+            },
+            {
+                "action": "click",
+                "elementType": "ID",
+                "locator": "id_submitbutton"
+            },
+            {
+                "action": "assert_text",
+                "elementType": "ID",
+                "locator": "id_error_firstname",
+                "value": "- Xin cho biết tên và tên đệm"
+            },
+            {
+                "action": "assert_text",
+                "elementType": "ID",
+                "locator": "id_error_lastname",
+                "value": "- Xin cho biết họ"
+            }
+        ]
+    },
+    {
+        "test_case": "Test case 5",
+        "last_name": "J",
+        "first_name": "K",
+        "error_firstname": "",
+        "error_lastname": "",
+        "steps": [
+            {
+                "action": "open",
+                "url": "https://school.moodledemo.net/?lang=vi"
+            },
+            {
+                "action": "set_window_size",
+                "width": 838,
+                "height": 816
+            },
+            {
+                "action": "click",
+                "elementType": "LINK_TEXT",
+                "locator": "Đăng nhập"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "ID",
+                "locator": "username",
+                "value": "student"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "ID",
+                "locator": "password",
+                "value": "moodle2024"
+            },
+            {
+                "action": "click",
+                "elementType": "ID",
+                "locator": "loginbtn"
+            },
+            {
+                "action": "click",
+                "elementType": "ID",
+                "locator": "user-menu-toggle"
+            },
+            {
+                "action": "click",
+                "elementType": "LINK_TEXT",
+                "locator": "Hồ sơ"
+            },
+            {
+                "action": "click",
+                "elementType": "LINK_TEXT",
+                "locator": "Sửa hồ sơ cá nhân"
+            },
+            {
+                "action": "clear",
+                "elementType": "ID",
+                "locator": "id_firstname"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "ID",
+                "locator": "id_firstname",
+                "value": "K"
+            },
+            {
+                "action": "clear",
+                "elementType": "ID",
+                "locator": "id_lastname"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "ID",
+                "locator": "id_lastname",
+                "value": "J"
+            },
+            {
+                "action": "click",
+                "elementType": "ID",
+                "locator": "id_submitbutton"
+            },
+            {
+                "action": "assert_text",
+                "elementType": "CSS_SELECTOR",
+                "locator": ".h2",
+                "value": "K J"
+            }
+        ]
+    },
+    {
+        "test_case": "Test case 6",
+        "last_name": "S",
+        "first_name": "",
+        "error_firstname": "- Xin cho biết tên và tên đệm",
+        "error_lastname": "",
+        "steps": [
+            {
+                "action": "open",
+                "url": "https://school.moodledemo.net/?lang=vi"
+            },
+            {
+                "action": "set_window_size",
+                "width": 838,
+                "height": 816
+            },
+            {
+                "action": "click",
+                "elementType": "LINK_TEXT",
+                "locator": "Đăng nhập"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "ID",
+                "locator": "username",
+                "value": "student"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "ID",
+                "locator": "password",
+                "value": "moodle2024"
+            },
+            {
+                "action": "click",
+                "elementType": "ID",
+                "locator": "loginbtn"
+            },
+            {
+                "action": "click",
+                "elementType": "ID",
+                "locator": "user-menu-toggle"
+            },
+            {
+                "action": "click",
+                "elementType": "LINK_TEXT",
+                "locator": "Hồ sơ"
+            },
+            {
+                "action": "click",
+                "elementType": "LINK_TEXT",
+                "locator": "Sửa hồ sơ cá nhân"
+            },
+            {
+                "action": "clear",
+                "elementType": "ID",
+                "locator": "id_firstname"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "ID",
+                "locator": "id_firstname",
+                "value": ""
+            },
+            {
+                "action": "clear",
+                "elementType": "ID",
+                "locator": "id_lastname"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "ID",
+                "locator": "id_lastname",
+                "value": "S"
+            },
+            {
+                "action": "click",
+                "elementType": "ID",
+                "locator": "id_submitbutton"
+            },
+            {
+                "action": "assert_text",
+                "elementType": "ID",
+                "locator": "id_error_firstname",
+                "value": "- Xin cho biết tên và tên đệm"
+            }
+        ]
+    },
+    {
+        "test_case": "Test case 7",
+        "last_name": "",
+        "first_name": "E",
+        "error_firstname": "",
+        "error_lastname": "- Xin cho biết họ",
+        "steps": [
+            {
+                "action": "open",
+                "url": "https://school.moodledemo.net/?lang=vi"
+            },
+            {
+                "action": "set_window_size",
+                "width": 838,
+                "height": 816
+            },
+            {
+                "action": "click",
+                "elementType": "LINK_TEXT",
+                "locator": "Đăng nhập"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "ID",
+                "locator": "username",
+                "value": "student"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "ID",
+                "locator": "password",
+                "value": "moodle2024"
+            },
+            {
+                "action": "click",
+                "elementType": "ID",
+                "locator": "loginbtn"
+            },
+            {
+                "action": "click",
+                "elementType": "ID",
+                "locator": "user-menu-toggle"
+            },
+            {
+                "action": "click",
+                "elementType": "LINK_TEXT",
+                "locator": "Hồ sơ"
+            },
+            {
+                "action": "click",
+                "elementType": "LINK_TEXT",
+                "locator": "Sửa hồ sơ cá nhân"
+            },
+            {
+                "action": "clear",
+                "elementType": "ID",
+                "locator": "id_firstname"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "ID",
+                "locator": "id_firstname",
+                "value": "E"
+            },
+            {
+                "action": "clear",
+                "elementType": "ID",
+                "locator": "id_lastname"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "ID",
+                "locator": "id_lastname",
+                "value": ""
+            },
+            {
+                "action": "click",
+                "elementType": "ID",
+                "locator": "id_submitbutton"
+            },
+            {
+                "action": "assert_text",
+                "elementType": "ID",
+                "locator": "id_error_lastname",
+                "value": "- Xin cho biết họ"
+            }
+        ]
+    }
+]
