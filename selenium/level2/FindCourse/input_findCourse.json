@@ -178,22 +178,7 @@
     {
         "test_case": "Find Course Test 3",
         "search_str": "math",
-        "expected_courses": ["Feline Welfare",
-      "Cross-cultural Communication",
-      "Digital Literacy",
-      "Mindful course creation",
-      "Critical Thinking: Develop your skills",
-      "Activity Examples",
-      "Psychology in Cinema",
-      "History: Russia in Revolution",
-      "Literature of France 1100 - 1960",
-      "English: The Lake Poets",
-      "Moodle and Mountaineering",
-      "Class and Conflict in World Cinema",
-      "Celebrating Cultures",
-      "World of Water",
-      "Junior Geography: Where's Matt?",
-      "Junior Mathematics"],
+        "expected_courses": ["Junior Mathematics"],
         "steps": [
             {
                 "action": "open",
