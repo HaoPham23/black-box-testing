@@ -12,7 +12,7 @@ import json
 MAX_TIMEOUT_SHORT = 3
 MAX_TIMEOUT = 10
 MAX_TIMEOUT_LONG = 600
-INPUT_PATH = os.path.join(os.path.dirname(__file__), "input.json")
+INPUT_PATH = os.path.join(os.path.dirname(__file__), "input_createEvent.json")
 
 def get_input_data():
     with open(INPUT_PATH, "r", encoding='UTF-8') as f:
