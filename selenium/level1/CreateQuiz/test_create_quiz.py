@@ -70,50 +70,44 @@ class TestCreateQuiz:
         Test case:
             Teacher creates a quiz to a course
         """
-        driver: webdriver.Chrome = remove_created_quiz
-        if '!' == expected[0]:
-            return
-        driver.implicitly_wait(MAX_TIMEOUT_SHORT)
-        driver.find_element(By.LINK_TEXT, "My courses").click()
-        try:
-            WebDriverWait(driver, MAX_TIMEOUT).until(EC.presence_of_element_located((By.LINK_TEXT, courseName))).click()
-        except:
-            pass # Course is already opened
-        edit_mode = WebDriverWait(driver, MAX_TIMEOUT).until(EC.presence_of_element_located((By.NAME, "setmode")))
-        if edit_mode.is_selected() == False:
-            edit_mode.click()
-        try:
-            wait = WebDriverWait(driver, timeout=MAX_TIMEOUT, poll_frequency=0.5, ignored_exceptions=ElementClickInterceptedException)
-            wait.until(lambda d : d.find_element(By.XPATH, "//span[contains(.,'Add an activity or resource')]").click() or True)
-        except ElementNotInteractableException: return
-
-        WebDriverWait(driver, MAX_TIMEOUT).until(EC.presence_of_element_located((By.LINK_TEXT, "Quiz"))).click()
-        quiz_name = driver.find_element(By.XPATH, '//*[@id="id_name"]')
-        quiz_name.clear()
-        quiz_name.send_keys(quizName)
-        driver.find_element(By.XPATH, f'//input[@value="{returnButtonText}"]').click()
-        wait = WebDriverWait(driver, MAX_TIMEOUT)
-        wait.until(EC.presence_of_element_located((By.XPATH, expected)) or True)
-        assert driver.find_element(By.XPATH, expected).is_displayed()
-        # driver.implicitly_wait(MAX_TIMEOUT)
-        
-    @pytest.mark.parametrize("id,courseName,quizName,returnButtonText,expected", get_input_data())
-    def test_create_quiz_fail(self, remove_created_quiz, id, courseName, quizName, returnButtonText, expected):
-        """
-            Teacher forgets to turn on edit mode
-        """
-        driver: webdriver.Chrome = remove_created_quiz
         if '!' != expected[0]:
-            return
-        wait = WebDriverWait(driver, timeout=MAX_TIMEOUT, poll_frequency=0.5, ignored_exceptions=ElementClickInterceptedException)
-        wait.until(lambda d : d.find_element(By.LINK_TEXT, "My courses").click() or True)
-        try:
-            WebDriverWait(driver, MAX_TIMEOUT).until(EC.presence_of_element_located((By.LINK_TEXT, courseName))).click()
-        except:
-            pass # Course is already opened
-        try:
-            driver.find_element(By.XPATH, expected[1:])
-            is_displayed = True
-        except NoSuchElementException:
-            is_displayed = False
-        assert is_displayed == False
+            driver: webdriver.Chrome = remove_created_quiz
+            if '!' == expected[0]:
+                return
+            driver.implicitly_wait(MAX_TIMEOUT_SHORT)
+            driver.find_element(By.LINK_TEXT, "My courses").click()
+            try:
+                WebDriverWait(driver, MAX_TIMEOUT).until(EC.presence_of_element_located((By.LINK_TEXT, courseName))).click()
+            except:
+                pass # Course is already opened
+            edit_mode = WebDriverWait(driver, MAX_TIMEOUT).until(EC.presence_of_element_located((By.NAME, "setmode")))
+            if edit_mode.is_selected() == False:
+                edit_mode.click()
+            try:
+                wait = WebDriverWait(driver, timeout=MAX_TIMEOUT, poll_frequency=0.5, ignored_exceptions=ElementClickInterceptedException)
+                wait.until(lambda d : d.find_element(By.XPATH, "//span[contains(.,'Add an activity or resource')]").click() or True)
+            except ElementNotInteractableException: return
+
+            WebDriverWait(driver, MAX_TIMEOUT).until(EC.presence_of_element_located((By.LINK_TEXT, "Quiz"))).click()
+            quiz_name = driver.find_element(By.XPATH, '//*[@id="id_name"]')
+            quiz_name.clear()
+            quiz_name.send_keys(quizName)
+            driver.find_element(By.XPATH, f'//input[@value="{returnButtonText}"]').click()
+            wait = WebDriverWait(driver, MAX_TIMEOUT)
+            wait.until(EC.presence_of_element_located((By.XPATH, expected)) or True)
+            assert driver.find_element(By.XPATH, expected).is_displayed()
+            # driver.implicitly_wait(MAX_TIMEOUT)
+        else:
+            driver: webdriver.Chrome = remove_created_quiz
+            wait = WebDriverWait(driver, timeout=MAX_TIMEOUT, poll_frequency=0.5, ignored_exceptions=ElementClickInterceptedException)
+            wait.until(lambda d : d.find_element(By.LINK_TEXT, "My courses").click() or True)
+            try:
+                WebDriverWait(driver, MAX_TIMEOUT).until(EC.presence_of_element_located((By.LINK_TEXT, courseName))).click()
+            except:
+                pass # Course is already opened
+            try:
+                driver.find_element(By.XPATH, expected[1:])
+                is_displayed = True
+            except NoSuchElementException:
+                is_displayed = False
+            assert is_displayed == False
