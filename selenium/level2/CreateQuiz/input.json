@@ -1,0 +1,263 @@
+[
+    {
+        "id": "CQ-001-0001",
+        "url": "https://sandbox.moodledemo.net/",
+        "tasks": [
+            {"action": "click", "element_type": "link text", "locator": "Log in", "value": null},
+            {"action": "click", "element_type": "id", "locator": "username", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "teacher"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "sandbox24"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "My courses", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "My first course", "value": null, "isOptional": "true"},
+            {"action": "toggle", "element_type": "name", "locator": "setmode", "value": "true"}, 
+            {"action": "sleep", "element_type": null, "locator": null, "value": 3},  
+            
+            {"action": "click", "element_type": "xpath", "locator": "//span[contains(.,'Add an activity or resource')]", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "Quiz", "value": null},
+            {"action": "clear", "element_type": "xpath", "locator": "//*[@id='id_name']", "value": null},
+            {"action": "send_keys", "element_type": "xpath", "locator": "//*[@id='id_name']", "value": "A"},
+
+            {"action": "click", "element_type": "xpath", "locator": "//input[@value='Save and return to course']", "value": null},
+            {"action": "sleep", "element_type": null, "locator": null, "value": 3}
+        ],
+        "expected": {
+            "action": "is_displayed",
+            "element_type": "xpath",
+            "locator": "//div[@data-activityname = 'A']",
+            "value": "true"
+        }
+    },
+    {
+        "id": "CQ-001-0002",
+        "url": "https://sandbox.moodledemo.net/",
+        "tasks": [
+            {"action": "click", "element_type": "link text", "locator": "Log in", "value": null},
+            {"action": "click", "element_type": "id", "locator": "username", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "teacher"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "sandbox24"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "My courses", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "My first course", "value": null, "isOptional": "true"},
+            {"action": "toggle", "element_type": "name", "locator": "setmode", "value": "true"}, 
+            {"action": "sleep", "element_type": null, "locator": null, "value": 3},  
+            
+            {"action": "click", "element_type": "xpath", "locator": "//span[contains(.,'Add an activity or resource')]", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "Quiz", "value": null},
+            {"action": "clear", "element_type": "xpath", "locator": "//*[@id='id_name']", "value": null},
+            {"action": "send_keys", "element_type": "xpath", "locator": "//*[@id='id_name']", "value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"},
+
+            {"action": "click", "element_type": "xpath", "locator": "//input[@value='Save and return to course']", "value": null},
+            {"action": "sleep", "element_type": null, "locator": null, "value": 3}
+        ],
+        "expected": {
+            "action": "is_displayed",
+            "element_type": "xpath",
+            "locator": "//div[@data-activityname = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA']",
+            "value": "true"
+        }
+    },
+    {
+        "id": "CQ-001-0003",
+        "url": "https://sandbox.moodledemo.net/",
+        "tasks": [
+            {"action": "click", "element_type": "link text", "locator": "Log in", "value": null},
+            {"action": "click", "element_type": "id", "locator": "username", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "teacher"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "sandbox24"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "My courses", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "My first course", "value": null, "isOptional": "true"},
+            {"action": "toggle", "element_type": "name", "locator": "setmode", "value": "true"}, 
+            {"action": "sleep", "element_type": null, "locator": null, "value": 3},  
+            
+            {"action": "click", "element_type": "xpath", "locator": "//span[contains(.,'Add an activity or resource')]", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "Quiz", "value": null},
+            {"action": "clear", "element_type": "xpath", "locator": "//*[@id='id_name']", "value": null},
+            {"action": "send_keys", "element_type": "xpath", "locator": "//*[@id='id_name']", "value": "AA"},
+
+            {"action": "click", "element_type": "xpath", "locator": "//input[@value='Save and return to course']", "value": null},
+            {"action": "sleep", "element_type": null, "locator": null, "value": 3}
+        ],
+        "expected": {
+            "action": "is_displayed",
+            "element_type": "xpath",
+            "locator": "//div[@data-activityname = 'AA']",
+            "value": "true"
+        }
+    },
+    {
+        "id": "CQ-001-0004",
+        "url": "https://sandbox.moodledemo.net/",
+        "tasks": [
+            {"action": "click", "element_type": "link text", "locator": "Log in", "value": null},
+            {"action": "click", "element_type": "id", "locator": "username", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "teacher"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "sandbox24"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "My courses", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "My first course", "value": null, "isOptional": "true"},
+            {"action": "toggle", "element_type": "name", "locator": "setmode", "value": "true"}, 
+            {"action": "sleep", "element_type": null, "locator": null, "value": 3},  
+            
+            {"action": "click", "element_type": "xpath", "locator": "//span[contains(.,'Add an activity or resource')]", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "Quiz", "value": null},
+            {"action": "clear", "element_type": "xpath", "locator": "//*[@id='id_name']", "value": null},
+            {"action": "send_keys", "element_type": "xpath", "locator": "//*[@id='id_name']", "value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"},
+
+            {"action": "click", "element_type": "xpath", "locator": "//input[@value='Save and return to course']", "value": null},
+            {"action": "sleep", "element_type": null, "locator": null, "value": 3}
+        ],
+        "expected": {
+            "action": "is_displayed",
+            "element_type": "xpath",
+            "locator": "//div[@data-activityname = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA']",
+            "value": "true"
+        }
+    },
+    {
+        "id": "CQ-001-0005",
+        "url": "https://sandbox.moodledemo.net/",
+        "tasks": [
+            {"action": "click", "element_type": "link text", "locator": "Log in", "value": null},
+            {"action": "click", "element_type": "id", "locator": "username", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "teacher"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "sandbox24"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "My courses", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "My first course", "value": null, "isOptional": "true"},
+            {"action": "toggle", "element_type": "name", "locator": "setmode", "value": "true"}, 
+            {"action": "sleep", "element_type": null, "locator": null, "value": 3},  
+            
+            {"action": "click", "element_type": "xpath", "locator": "//span[contains(.,'Add an activity or resource')]", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "Quiz", "value": null},
+            {"action": "clear", "element_type": "xpath", "locator": "//*[@id='id_name']", "value": null},
+            {"action": "send_keys", "element_type": "xpath", "locator": "//*[@id='id_name']", "value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"},
+
+            {"action": "click", "element_type": "xpath", "locator": "//input[@value='Save and return to course']", "value": null},
+            {"action": "sleep", "element_type": null, "locator": null, "value": 3}
+        ],
+        "expected": {
+            "action": "is_displayed",
+            "element_type": "xpath",
+            "locator": "//div[@data-activityname = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA']",
+            "value": "true"
+        }
+    },
+    {
+        "id": "CQ-002-0001",
+        "url": "https://sandbox.moodledemo.net/",
+        "tasks": [
+            {"action": "click", "element_type": "link text", "locator": "Log in", "value": null},
+            {"action": "click", "element_type": "id", "locator": "username", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "teacher"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "sandbox24"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "My courses", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "My first course", "value": null, "isOptional": "true"},
+            {"action": "toggle", "element_type": "name", "locator": "setmode", "value": "true"}, 
+            {"action": "sleep", "element_type": null, "locator": null, "value": 3},  
+            
+            {"action": "click", "element_type": "xpath", "locator": "//span[contains(.,'Add an activity or resource')]", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "Quiz", "value": null},
+            {"action": "clear", "element_type": "xpath", "locator": "//*[@id='id_name']", "value": null},
+            {"action": "send_keys", "element_type": "xpath", "locator": "//*[@id='id_name']", "value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"},
+
+            {"action": "click", "element_type": "xpath", "locator": "//input[@value='Save and return to course']", "value": null},
+            {"action": "sleep", "element_type": null, "locator": null, "value": 3}
+        ],
+        "expected": {
+            "action": "is_displayed",
+            "element_type": "xpath",
+            "locator": "//div[@data-activityname = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA']",
+            "value": "true"
+        }
+    },
+    {
+        "id": "CQ-003-0001",
+        "url": "https://sandbox.moodledemo.net/",
+        "tasks": [
+            {"action": "click", "element_type": "link text", "locator": "Log in", "value": null},
+            {"action": "click", "element_type": "id", "locator": "username", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "teacher"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "sandbox24"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "My courses", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "My first course", "value": null, "isOptional": "true"},
+            {"action": "toggle", "element_type": "name", "locator": "setmode", "value": "true"}, 
+            {"action": "sleep", "element_type": null, "locator": null, "value": 3},  
+            
+            {"action": "click", "element_type": "xpath", "locator": "//span[contains(.,'Add an activity or resource')]", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "Quiz", "value": null},
+            {"action": "clear", "element_type": "xpath", "locator": "//*[@id='id_name']", "value": null},
+            {"action": "send_keys", "element_type": "xpath", "locator": "//*[@id='id_name']", "value": ""},
+
+            {"action": "click", "element_type": "xpath", "locator": "//input[@value='Save and return to course']", "value": null},
+            {"action": "sleep", "element_type": null, "locator": null, "value": 3}
+        ],
+        "expected": {
+            "action": "is_displayed",
+            "element_type": "xpath",
+            "locator": "//div[@class='form-control-feedback invalid-feedback']",
+            "value": "true"
+        }
+    },
+    {
+        "id": "CQ-003-0002",
+        "url": "https://sandbox.moodledemo.net/",
+        "tasks": [
+            {"action": "click", "element_type": "link text", "locator": "Log in", "value": null},
+            {"action": "click", "element_type": "id", "locator": "username", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "teacher"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "sandbox24"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "My courses", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "My first course", "value": null, "isOptional": "true"},
+            {"action": "toggle", "element_type": "name", "locator": "setmode", "value": "false"}
+        ],
+        "expected": {
+            "action": "is_displayed",
+            "element_type": "xpath",
+            "locator": "//span[contains(text(), 'Add an activity or resource')]",
+            "value": "false"
+        }
+    },
+    {
+        "id": "CQ-004-0001",
+        "url": "https://sandbox.moodledemo.net/",
+        "tasks": [
+            {"action": "click", "element_type": "link text", "locator": "Log in", "value": null},
+            {"action": "click", "element_type": "id", "locator": "username", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "teacher"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "sandbox24"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "My courses", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "My first course", "value": null, "isOptional": "true"},
+            {"action": "toggle", "element_type": "name", "locator": "setmode", "value": "true"}, 
+            {"action": "sleep", "element_type": null, "locator": null, "value": 3},  
+            
+            {"action": "click", "element_type": "xpath", "locator": "//span[contains(.,'Add an activity or resource')]", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "Quiz", "value": null},
+            {"action": "clear", "element_type": "xpath", "locator": "//*[@id='id_name']", "value": null},
+            {"action": "send_keys", "element_type": "xpath", "locator": "//*[@id='id_name']", "value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"},
+
+            {"action": "click", "element_type": "xpath", "locator": "//input[@value='Save and display']", "value": null},
+            {"action": "sleep", "element_type": null, "locator": null, "value": 3}
+        ],
+        "expected": {
+            "action": "is_displayed",
+            "element_type": "xpath",
+            "locator": "//div[@data-activityname = 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA']",
+            "value": "true"
+        }
+    }
+]
