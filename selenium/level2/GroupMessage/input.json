@@ -1,0 +1,274 @@
+[
+    {
+        "id": "GM-001-0001",
+        "url": "https://school.moodledemo.net/my/courses.php",
+        "tasks": [
+            {"action": "click", "element_type": "link text", "locator": "Log in", "value": null},
+            {"action": "click", "element_type": "id", "locator": "username", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "student"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "moodle2024"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+
+            {"action": "click", "element_type": "xpath", "locator": "//a[@id='user-menu-toggle']", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//a[@href='https://school.moodledemo.net/message/index.php']", "value": null},
+            {"action": "sleep", "element_type": null, "locator": null, "value": 3},  
+
+            {"action": "click", "element_type": "xpath", "locator": "//span[contains(text(), 'Group')]", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//strong[contains(text(), 'Team South')]", "value": null},
+
+            {"action": "clear", "element_type": "xpath", "locator": "//textarea[@aria-label='Write a message...']", "value": null},
+            {"action": "send_keys", "element_type": "xpath", "locator": "//textarea[@aria-label='Write a message...']", "value": "A"},
+
+            {"action": "click", "element_type": "xpath", "locator": "//i[@class='icon fa-regular fa-paper-plane fa-fw ']", "value": null},
+            {"action": "sleep", "element_type": null, "locator": null, "value": 3}
+        ],
+        "expected": {
+            "action": "text",
+            "element_type": "xpath",
+            "locator": "//textarea[@aria-label='Write a message...']",
+            "value": ""
+        }
+    },
+    {
+        "id": "GM-001-0002",
+        "url": "https://school.moodledemo.net/my/courses.php",
+        "tasks": [
+            {"action": "click", "element_type": "link text", "locator": "Log in", "value": null},
+            {"action": "click", "element_type": "id", "locator": "username", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "student"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "moodle2024"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+
+            {"action": "click", "element_type": "xpath", "locator": "//a[@id='user-menu-toggle']", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//a[@href='https://school.moodledemo.net/message/index.php']", "value": null},
+            {"action": "sleep", "element_type": null, "locator": null, "value": 3},  
+
+            {"action": "click", "element_type": "xpath", "locator": "//span[contains(text(), 'Group')]", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//strong[contains(text(), 'Team South')]", "value": null},
+
+            {"action": "clear", "element_type": "xpath", "locator": "//textarea[@aria-label='Write a message...']", "value": null},
+            {"action": "send_keys", "element_type": "xpath", "locator": "//textarea[@aria-label='Write a message...']", "value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"},
+
+            {"action": "click", "element_type": "xpath", "locator": "//i[@class='icon fa-regular fa-paper-plane fa-fw ']", "value": null},
+            {"action": "sleep", "element_type": null, "locator": null, "value": 3}
+        ],
+        "expected": {
+            "action": "text",
+            "element_type": "xpath",
+            "locator": "//textarea[@aria-label='Write a message...']",
+            "value": ""
+        }
+    },
+    {
+        "id": "GM-001-0003",
+        "url": "https://school.moodledemo.net/my/courses.php",
+        "tasks": [
+            {"action": "click", "element_type": "link text", "locator": "Log in", "value": null},
+            {"action": "click", "element_type": "id", "locator": "username", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "student"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "moodle2024"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+
+            {"action": "click", "element_type": "xpath", "locator": "//a[@id='user-menu-toggle']", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//a[@href='https://school.moodledemo.net/message/index.php']", "value": null},
+            {"action": "sleep", "element_type": null, "locator": null, "value": 3},  
+
+            {"action": "click", "element_type": "xpath", "locator": "//span[contains(text(), 'Group')]", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//strong[contains(text(), 'Team South')]", "value": null},
+
+            {"action": "clear", "element_type": "xpath", "locator": "//textarea[@aria-label='Write a message...']", "value": null},
+            {"action": "send_keys", "element_type": "xpath", "locator": "//textarea[@aria-label='Write a message...']", "value": "AA"},
+
+            {"action": "click", "element_type": "xpath", "locator": "//i[@class='icon fa-regular fa-paper-plane fa-fw ']", "value": null},
+            {"action": "sleep", "element_type": null, "locator": null, "value": 3}
+        ],
+        "expected": {
+            "action": "text",
+            "element_type": "xpath",
+            "locator": "//textarea[@aria-label='Write a message...']",
+            "value": ""
+        }
+    },
+    {
+        "id": "GM-001-0004",
+        "url": "https://school.moodledemo.net/my/courses.php",
+        "tasks": [
+            {"action": "click", "element_type": "link text", "locator": "Log in", "value": null},
+            {"action": "click", "element_type": "id", "locator": "username", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "student"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "moodle2024"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+
+            {"action": "click", "element_type": "xpath", "locator": "//a[@id='user-menu-toggle']", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//a[@href='https://school.moodledemo.net/message/index.php']", "value": null},
+            {"action": "sleep", "element_type": null, "locator": null, "value": 3},  
+
+            {"action": "click", "element_type": "xpath", "locator": "//span[contains(text(), 'Group')]", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//strong[contains(text(), 'Team South')]", "value": null},
+
+            {"action": "clear", "element_type": "xpath", "locator": "//textarea[@aria-label='Write a message...']", "value": null},
+            {"action": "send_keys", "element_type": "xpath", "locator": "//textarea[@aria-label='Write a message...']", "value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"},
+
+            {"action": "click", "element_type": "xpath", "locator": "//i[@class='icon fa-regular fa-paper-plane fa-fw ']", "value": null},
+            {"action": "sleep", "element_type": null, "locator": null, "value": 3}
+        ],
+        "expected": {
+            "action": "text",
+            "element_type": "xpath",
+            "locator": "//textarea[@aria-label='Write a message...']",
+            "value": ""
+        }
+    },
+    {
+        "id": "GM-001-0005",
+        "url": "https://school.moodledemo.net/my/courses.php",
+        "tasks": [
+            {"action": "click", "element_type": "link text", "locator": "Log in", "value": null},
+            {"action": "click", "element_type": "id", "locator": "username", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "student"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "moodle2024"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+
+            {"action": "click", "element_type": "xpath", "locator": "//a[@id='user-menu-toggle']", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//a[@href='https://school.moodledemo.net/message/index.php']", "value": null},
+            {"action": "sleep", "element_type": null, "locator": null, "value": 3},  
+
+            {"action": "click", "element_type": "xpath", "locator": "//span[contains(text(), 'Group')]", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//strong[contains(text(), 'Team South')]", "value": null},
+
+            {"action": "clear", "element_type": "xpath", "locator": "//textarea[@aria-label='Write a message...']", "value": null},
+            {"action": "send_keys", "element_type": "xpath", "locator": "//textarea[@aria-label='Write a message...']", "value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"},
+
+            {"action": "click", "element_type": "xpath", "locator": "//i[@class='icon fa-regular fa-paper-plane fa-fw ']", "value": null},
+            {"action": "sleep", "element_type": null, "locator": null, "value": 3}
+        ],
+        "expected": {
+            "action": "text",
+            "element_type": "xpath",
+            "locator": "//textarea[@aria-label='Write a message...']",
+            "value": ""
+        }
+    },
+    {
+        "id": "GM-002-0001",
+        "url": "https://school.moodledemo.net/my/courses.php",
+        "tasks": [
+            {"action": "click", "element_type": "link text", "locator": "Log in", "value": null},
+            {"action": "click", "element_type": "id", "locator": "username", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "student"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "moodle2024"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+
+            {"action": "click", "element_type": "xpath", "locator": "//a[@id='user-menu-toggle']", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//a[@href='https://school.moodledemo.net/message/index.php']", "value": null},
+            {"action": "sleep", "element_type": null, "locator": null, "value": 3},  
+
+            {"action": "click", "element_type": "xpath", "locator": "//span[contains(text(), 'Group')]", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//strong[contains(text(), 'Team South')]", "value": null},
+
+            {"action": "clear", "element_type": "xpath", "locator": "//textarea[@aria-label='Write a message...']", "value": null},
+            {"action": "send_keys", "element_type": "xpath", "locator": "//textarea[@aria-label='Write a message...']", "value": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"},
+
+            {"action": "click", "element_type": "xpath", "locator": "//i[@class='icon fa-regular fa-paper-plane fa-fw ']", "value": null},
+            {"action": "sleep", "element_type": null, "locator": null, "value": 3}
+        ],
+        "expected": {
+            "action": "text",
+            "element_type": "xpath",
+            "locator": "//textarea[@aria-label='Write a message...']",
+            "value": ""
+        }
+    },
+    {
+        "id": "GM-003-0001",
+        "url": "https://school.moodledemo.net/my/courses.php",
+        "tasks": [
+            {"action": "click", "element_type": "link text", "locator": "Log in", "value": null},
+            {"action": "click", "element_type": "id", "locator": "username", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "student"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "moodle2024"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+
+            {"action": "click", "element_type": "xpath", "locator": "//a[@id='user-menu-toggle']", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//a[@href='https://school.moodledemo.net/message/index.php']", "value": null},
+            {"action": "sleep", "element_type": null, "locator": null, "value": 3},  
+
+            {"action": "click", "element_type": "xpath", "locator": "//span[contains(text(), 'Group')]", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//strong[contains(text(), 'Team South')]", "value": null},
+
+            {"action": "clear", "element_type": "xpath", "locator": "//textarea[@aria-label='Write a message...']", "value": null},
+            {"action": "send_keys", "element_type": "xpath", "locator": "//textarea[@aria-label='Write a message...']", "value": ""},
+
+            {"action": "click", "element_type": "xpath", "locator": "//i[@class='icon fa-regular fa-paper-plane fa-fw ']", "value": null},
+            {"action": "sleep", "element_type": null, "locator": null, "value": 3}
+        ],
+        "expected": {
+            "action": "text",
+            "element_type": "xpath",
+            "locator": "//textarea[@aria-label='Write a message...']",
+            "value": ""
+        }
+    },
+    {
+        "id": "GM-003-0001",
+        "url": "https://school.moodledemo.net/my/courses.php",
+        "tasks": [
+            {"action": "click", "element_type": "link text", "locator": "Log in", "value": null},
+            {"action": "click", "element_type": "id", "locator": "username", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "student"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "moodle2024"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+
+            {"action": "click", "element_type": "xpath", "locator": "//a[@id='user-menu-toggle']", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//a[@href='https://school.moodledemo.net/message/index.php']", "value": null},
+            {"action": "sleep", "element_type": null, "locator": null, "value": 3},  
+
+            {"action": "click", "element_type": "xpath", "locator": "//span[contains(text(), 'Group')]", "value": null}
+        ],
+        "expected": {
+            "action": "is_displayed",
+            "element_type": "xpath",
+            "locator": "//strong[contains(text(), 'Team West')]",
+            "value": "false"
+        }
+    },
+    {
+        "id": "GM-004-0001",
+        "url": "https://school.moodledemo.net/my/courses.php",
+        "tasks": [
+            {"action": "click", "element_type": "link text", "locator": "Log in", "value": null},
+            {"action": "click", "element_type": "id", "locator": "username", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "student"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "moodle2024"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+
+            {"action": "click", "element_type": "link text", "locator": "Home", "value": null},
+            {"action": "sleep", "element_type": null, "locator": null, "value": 1},
+            {"action": "click", "element_type": "xpath", "locator": "//i[@class='icon fa fa-message fa-fw ']", "value": null},
+
+            {"action": "click", "element_type": "xpath", "locator": "//span[contains(text(), 'Group')]", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//strong[contains(text(), 'Team South')]", "value": null},
+
+            {"action": "clear", "element_type": "xpath", "locator": "//textarea[@aria-label='Write a message...']", "value": null},
+            {"action": "send_keys", "element_type": "xpath", "locator": "//textarea[@aria-label='Write a message...']", "value": ""},
+
+            {"action": "click", "element_type": "xpath", "locator": "//i[@class='icon fa-regular fa-paper-plane fa-fw ']", "value": null},
+            {"action": "sleep", "element_type": null, "locator": null, "value": 3}
+        ],
+        "expected": {
+            "action": "text",
+            "element_type": "xpath",
+            "locator": "//textarea[@aria-label='Write a message...']",
+            "value": ""
+        }
+    }
+]
