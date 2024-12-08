@@ -1,3 +1,196 @@
 \subsection{Create Quiz}
+\subsubsection{Level 1}
+Ở level 1, mỗi testcase bao gồm các trường:
+\begin{itemize}
+    \item \textbf{id}: Mã số của testcase.
+    \item \textbf{courseName}: Tên khoá học cần tạo bài quiz.
+    \item \textbf{quizName}: Tên bài quiz cần tạo.
+    \item \textbf{returnButtonText}: Trường text của nút tạo bài quiz.
+    \item \textbf{expected}: Phần tử testcase mong đợi sẽ xuất hiện hoặc không xuất hiện.
+\end{itemize}
 
+Ví dụ:
+\begin{lstlisting}[language=bash, caption={Ví dụ testcase CQ-001-0001 ở level 1}]
+    {
+        "id": "CQ-001-0001",
+        "courseName": "My first course",
+        "quizName": "A",
+        "returnButtonText": "Save and return to course",
+        "expected": "//div[@data-activityname = 'A']"
+    },
+\end{lstlisting}
+\subsubsection{Level 2}
+
+Ở level 2, mỗi testcase sẽ bao gồm các trường:
+\begin{itemize}
+    \item \textbf{id}: Mã số của testcase.
+    \item \textbf{url}: Đường dẫn đến trang tạo bài quiz.
+    \item \textbf{tasks}: Danh sách từng bước cần thực hiện. Mỗi bước bao gồm:
+\begin{itemize}
+    \item \textbf{action}: Hành động cần thực hiện.
+    \item \textbf{element\_type}: Loại định danh (xpath, id, name, link text,...).
+    \item \textbf{locator}: Định danh của phần tử cần thao tác.
+    \item \textbf{value}: Giá trị cần nhập vào phần tử (nếu có).
+\end{itemize}
+    \item \textbf{expected}: Kết quả mong đợi. Bao gồm:
+\begin{itemize}
+    \item \textbf{action}: Hành động cần kiểm tra.
+    \item \textbf{element\_type}: Loại định danh (xpath, id, name, link text,...).
+    \item \textbf{locator}: Định danh của phần tử cần kiểm tra.
+    \item \textbf{value}: Giá trị cần kiểm tra (nếu có).
+\end{itemize}
+\end{itemize}
+
+Ví dụ:
+\begin{lstlisting}[language=bash, caption={Ví dụ testcase CQ-001-0001 ở level 2}]
+{
+    "id": "CQ-001-0001",
+    "url": "https://sandbox.moodledemo.net/",
+    "tasks": [
+        {"action": "click", "element_type": "link text", 
+            "locator": "Log in", "value": null},
+        {"action": "click", "element_type": "id", 
+            "locator": "username", "value": null},
+        {"action": "send_keys", "element_type": "id", 
+            "locator": "username", "value": "teacher"},
+        {"action": "click", "element_type": "id", 
+            "locator": "password", "value": null},
+        {"action": "send_keys", "element_type": "id", 
+            "locator": "password", "value": "sandbox24"},
+        {"action": "click", "element_type": "id", 
+            "locator": "loginbtn", "value": null},
+        {"action": "click", "element_type": "link text", 
+            "locator": "My courses", "value": null},
+        {"action": "click", "element_type": "link text", 
+            "locator": "My first course", "value": null, 
+            "isOptional": "true"},
+        {"action": "toggle", "element_type": "name", 
+            "locator": "setmode", "value": "true"}, 
+        {"action": "sleep", "element_type": null, 
+            "locator": null, "value": 3},  
+        
+        {"action": "click", "element_type": "xpath", 
+            "locator": "//span[contains(.,'Add an activity or resource')]", 
+            "value": null},
+        {"action": "click", "element_type": "link text", 
+            "locator": "Quiz", "value": null},
+        {"action": "clear", "element_type": "xpath", 
+            "locator": "//*[@id='id_name']", "value": null},
+        {"action": "send_keys", "element_type": "xpath", 
+            "locator": "//*[@id='id_name']", "value": "A"},
+
+        {"action": "click", "element_type": "xpath", 
+            "locator": "//input[@value='Save and return to course']", 
+            "value": null},
+        {"action": "sleep", "element_type": null, 
+            "locator": null, "value": 3}
+    ],
+    "expected": {
+        "action": "is_displayed",
+        "element_type": "xpath",
+        "locator": "//div[@data-activityname = 'A']",
+        "value": "true"
+    }
+},
+\end{lstlisting}
 \subsection{Group Message}
+\subsubsection{Level 1}
+Ở level 1, mỗi testcase bao gồm các trường:
+\begin{itemize}
+    \item \textbf{id}: Mã số của testcase.
+    \item \textbf{groupName}: Tên nhóm cần gửi tin nhắn.
+    \item \textbf{messageText}: Nội dung tin nhắn cần gửi.
+    \item \textbf{isUserMenu}: Trường xác định xem nút gửi tin nhắn có phải là nút của thanh menu không.
+    \item \textbf{expected}: Phần tử testcase mong đợi sẽ không chứa nội dung tin nhắn.
+\end{itemize}
+
+Ví dụ:
+\begin{lstlisting}[language=bash, caption={Ví dụ testcase GM-001-0001 ở level 1}]
+    {
+        "id": "GM-001-0001",
+        "groupName": "Team South",
+        "messageText": "A",
+        "isUserMenu": "true",
+        "expected": "//textarea[@aria-label='Write a message...']"
+    }
+\end{lstlisting}
+
+\subsubsection{Level 2}
+
+Ở level 2, mỗi testcase sẽ bao gồm các trường:
+\begin{itemize}
+    \item \textbf{id}: Mã số của testcase.
+    \item \textbf{url}: Đường dẫn đến trang tạo bài quiz.
+    \item \textbf{tasks}: Danh sách từng bước cần thực hiện. Mỗi bước bao gồm:
+\begin{itemize}
+    \item \textbf{action}: Hành động cần thực hiện.
+    \item \textbf{element\_type}: Loại định danh (xpath, id, name, link text,...).
+    \item \textbf{locator}: Định danh của phần tử cần thao tác.
+    \item \textbf{value}: Giá trị cần nhập vào phần tử (nếu có).
+\end{itemize}
+    \item \textbf{expected}: Kết quả mong đợi. Bao gồm:
+\begin{itemize}
+    \item \textbf{action}: Hành động cần kiểm tra.
+    \item \textbf{element\_type}: Loại định danh (xpath, id, name, link text,...).
+    \item \textbf{locator}: Định danh của phần tử cần kiểm tra.
+    \item \textbf{value}: Giá trị cần kiểm tra (nếu có).
+\end{itemize}
+\end{itemize}
+
+Ví dụ:
+
+\begin{lstlisting}[language=bash, caption={Ví dụ testcase GM-001-0001 ở level 2}]
+    {
+    "id": "GM-001-0001",
+    "url": "https://school.moodledemo.net/my/courses.php",
+    "tasks": [
+        {"action": "click", "element_type": "link text", 
+            "locator": "Log in", "value": null},
+        {"action": "click", "element_type": "id", 
+            "locator": "username", "value": null},
+        {"action": "send_keys", "element_type": "id", 
+            "locator": "username", "value": "student"},
+        {"action": "click", "element_type": "id", 
+            "locator": "password", "value": null},
+        {"action": "send_keys", "element_type": "id", 
+            "locator": "password", "value": "moodle2024"},
+        {"action": "click", "element_type": "id", 
+            "locator": "loginbtn", "value": null},
+
+        {"action": "click", "element_type": "xpath", 
+            "locator": "//a[@id='user-menu-toggle']", 
+            "value": null},
+        {"action": "click", "element_type": "xpath", 
+            "locator": "//a[@href='https://school.moodledemo.net/message/index.php']", 
+            "value": null},
+        {"action": "sleep", "element_type": null, 
+            "locator": null, "value": 3},  
+
+        {"action": "click", "element_type": "xpath", 
+            "locator": "//span[contains(text(), 'Group')]", 
+            "value": null},
+        {"action": "click", "element_type": "xpath", 
+            "locator": "//strong[contains(text(), 'Team South')]", 
+            "value": null},
+
+        {"action": "clear", "element_type": "xpath", 
+            "locator": "//textarea[@aria-label='Write a message...']", 
+            "value": null},
+        {"action": "send_keys", "element_type": "xpath", 
+            "locator": "//textarea[@aria-label='Write a message...']", 
+            "value": "A"},
+
+        {"action": "click", "element_type": "xpath", 
+            "locator": "//i[@class='icon fa-regular fa-paper-plane fa-fw ']", 
+            "value": null},
+        {"action": "sleep", "element_type": null, 
+            "locator": null, "value": 3}
+    ],
+    "expected": {
+        "action": "text",
+        "element_type": "xpath",
+        "locator": "//textarea[@aria-label='Write a message...']",
+        "value": ""
+    }
+},
+\end{lstlisting}
