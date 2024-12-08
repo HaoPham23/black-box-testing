@@ -1,0 +1,222 @@
+\subsection{Create Event}
+\subsubsection{Level 1}
+Ở level 1, mỗi testcase bao gồm các trường:
+\begin{itemize}
+    \item \textbf{id}: Mã số của testcase.
+    \item \textbf{name}: Tên của sự kiện được tạo ra.
+    \item \textbf{startDay}: Ngày bắt đầu của sự kiện.
+    \item \textbf{startMonth}: Tháng bắt đầu của sự kiện.
+    \item \textbf{startYear}: Năm bắt đầu của sự kiện.
+    \item \textbf{startHour}: Giờ bắt đầu của sự kiện.
+    \item \textbf{startMinute}: Phút bắt đầu của sự kiện.
+    \item \textbf{duration}: Khoảng thời gian sự kiện diễn ra. Khi trường này có giá trị khác null thì các trường kết thúc sự kiện sẽ có giá trị là null và ngược lại.
+    \item \textbf{endDay}: Ngày kết thúc của sự kiện.
+    \item \textbf{endMonth}: Tháng kết thúc của sự kiện.
+    \item \textbf{endYear}: Năm kết thúc của sự kiện.
+    \item \textbf{endHour}: Giờ kết thúc của sự kiện.
+    \item \textbf{endMinute}: Phút kết thúc của sự kiện.
+    \item \textbf{error}: Phần tử testcase mong đợi sẽ xuất hiện khi có lỗi xảy ra.
+\end{itemize}
+
+Ví dụ:
+\begin{lstlisting}[language=bash, caption={Ví dụ testcase CE-002-004 ở level 1}]
+    {
+        "id": "CE-002-004",
+        "name": "asd",
+        "startDay": "20",
+        "startMonth": "thang 11",
+        "startYear": "2024",
+        "startHour": "19",
+        "startMinute": "00",
+        "duration": null,
+        "endDay": "20",
+        "endMonth": "thang 11",
+        "endYear": "2024",
+        "endHour": "18",
+        "endMinute": "59",
+        "error": "fgroup_id_error_durationgroup"
+    }
+\end{lstlisting}
+\subsubsection{Level 2}
+Ở level 2, mỗi testcase bao gồm các trường:
+\begin{itemize}
+    \item \textbf{id}: Mã số của testcase.
+    \item \textbf{url}: Đường dẫn đến trang tạo bài quiz.
+    \item \textbf{tasks}: Danh sách từng bước cần thực hiện. Mỗi bước bao gồm:
+\begin{itemize}
+    \item \textbf{action}: Hành động cần thực hiện.
+    \item \textbf{element\_type}: Loại định danh (xpath, id, name, link text,...).
+    \item \textbf{locator}: Định danh của phần tử cần thao tác.
+    \item \textbf{value}: Giá trị cần nhập vào phần tử (nếu có).
+\end{itemize}
+    \item \textbf{expected}: Kết quả mong đợi. Bao gồm:
+\begin{itemize}
+    \item \textbf{action}: Hành động cần kiểm tra.
+    \item \textbf{element\_type}: Loại định danh (xpath, id, name, link text, css-selector,...).
+    \item \textbf{locator}: Định danh của phần tử cần kiểm tra.
+    \item \textbf{value}: Giá trị cần kiểm tra (nếu có).
+\end{itemize}
+\end{itemize}
+
+Ví dụ:
+\begin{lstlisting}[language=bash, caption={Ví dụ testcase CE-002-007 ở level 2}]
+    {
+        "id": "CE-002-007",
+        "url": "https://sandbox.moodledemo.net/",
+        "tasks": [
+            {"action": "click", "element_type": "id", 
+            "locator": "lang-menu-toggle", "value": null},
+            {"action": "click", "element_type": "css", 
+            "locator": ".dropdown-item:nth-child(103)", "value": null},
+
+            {"action": "click", "element_type": "link text", 
+            "locator": "Dang nhap", "value": null},
+            {"action": "click", "element_type": "id", 
+            "locator": "username", "value": null},
+            {"action": "send_keys", "element_type": "id", 
+            "locator": "username", "value": "manager"},
+            {"action": "click", "element_type": "id", 
+            "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", 
+            "locator": "password", "value": "sandbox24"},
+            {"action": "click", "element_type": "id", 
+            "locator": "loginbtn", "value": null},
+
+            {"action": "click", "element_type": "link text", 
+            "locator": "Bang dieu khien", "value": null},
+            {"action": "click", "element_type": "xpath", 
+            "locator": "//button[contains(.,'Su kien moi')]", 
+            "value": null},
+
+            {"action": "click", "element_type": "id", 
+            "locator": "id_name", "value": null},
+            {"action": "send_keys", "element_type": "id", 
+            "locator": "id_name", "value": "asb"},
+            {"action": "send_keys", "element_type": "id", 
+            "locator": "id_timestart_day", "value": "20"},
+            {"action": "send_keys", "element_type": "id", 
+            "locator": "id_timestart_month", "value": "thang 11"},
+            {"action": "send_keys", "element_type": "id", 
+            "locator": "id_timestart_year", "value": "2024"},
+            {"action": "send_keys", "element_type": "id", 
+            "locator": "id_timestart_hour", "value": "19"},
+            {"action": "send_keys", "element_type": "id", 
+            "locator": "id_timestart_minute", "value": "00"},
+            
+            {"action": "click", "element_type": "xpath", 
+            "locator": "//a[contains(.,'Show more...')]", 
+            "value": null},
+
+            {"action": "click", "element_type": "css", 
+            "locator": ".form-check-inline:nth-child(9)", 
+            "value": null},
+            {"action": "send_keys", "element_type": "id", 
+            "locator": "id_timedurationminutes", "value": "ab"},
+
+            {"action": "click", "element_type": "xpath", 
+            "locator": "//button[contains(.,'Luu')]", 
+            "value": null}
+            
+        ],
+        "expected": {
+            "action" : "is_displayed",
+            "element_type": "id",
+            "locator": "fgroup_id_error_durationgroup",
+            "value": "true"
+        }
+    }
+\end{lstlisting}
+
+\subsection{Change Password}
+\subsubsection{Level 1}
+Ở level 1, mỗi testcase bao gồm các trường:
+\begin{itemize}
+    \item \textbf{id}: Mã số của testcase.
+    \item \textbf{currentPassword}: Giá trị sẽ nhập vào trường mật khẩu hiện tại.
+    \item \textbf{newPassword}: Giá trị sẽ nhập vào trường mật khẩu mới.
+    \item \textbf{newPasswordAgain}: Giá trị sẽ nhập vào trường mật khẩu mới (lại).
+    \item \textbf{error}: Phần tử testcase mong đợi sẽ xuất hiện khi có lỗi xảy ra.
+\end{itemize}
+
+Ví dụ:
+\begin{lstlisting}[language=bash, caption={Ví dụ testcase CP-002-001 ở level 1}]
+    {
+        "id" : "CP-002-001",
+        "currentPassword": "sandbox24",
+        "newPassword": "a",
+        "newPasswordAgain": "a",
+        "error" : null
+    }
+\end{lstlisting}
+\subsubsection{Level 2}
+Ở level 2, mỗi testcase bao gồm các trường:
+\begin{itemize}
+    \item \textbf{id}: Mã số của testcase.
+    \item \textbf{url}: Đường dẫn đến trang tạo bài quiz.
+    \item \textbf{tasks}: Danh sách từng bước cần thực hiện. Mỗi bước bao gồm:
+\begin{itemize}
+    \item \textbf{action}: Hành động cần thực hiện.
+    \item \textbf{element\_type}: Loại định danh (xpath, id, name, link text, css-selector, ...).
+    \item \textbf{locator}: Định danh của phần tử cần thao tác.
+    \item \textbf{value}: Giá trị cần nhập vào phần tử (nếu có).
+\end{itemize}
+    \item \textbf{expected}: Kết quả mong đợi. Bao gồm:
+\begin{itemize}
+    \item \textbf{action}: Hành động cần kiểm tra.
+    \item \textbf{element\_type}: Loại định danh (xpath, id, name, link text,...).
+    \item \textbf{locator}: Định danh của phần tử cần kiểm tra.
+    \item \textbf{value}: Giá trị cần kiểm tra (nếu có).
+\end{itemize}
+\end{itemize}
+
+Ví dụ:
+\begin{lstlisting}[language=bash, caption={Ví dụ testcase CP-002-004 ở level 2}]
+    {
+        "id": "CP-002-004",
+        "url": "https://sandbox.moodledemo.net/",
+        "tasks": [
+            {"action": "click", "element_type": "id", 
+            "locator": "lang-menu-toggle", "value": null},
+            {"action": "click", "element_type": "css", 
+            "locator": ".dropdown-item:nth-child(103)", 
+            "value": null},
+
+            {"action": "click", "element_type": "link text", 
+            "locator": "Dang nhap", "value": null},
+            {"action": "click", "element_type": "id", 
+            "locator": "username", "value": null},
+            {"action": "send_keys", "element_type": "id", 
+            "locator": "username", "value": "student"},
+            {"action": "click", "element_type": "id", 
+            "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", 
+            "locator": "password", "value": "a"},
+            {"action": "click", "element_type": "id", 
+            "locator": "loginbtn", "value": null},
+
+            {"action": "click", "element_type": "id", 
+            "locator": "user-menu-toggle", "value": null},
+            {"action": "click", "element_type": "link text", 
+            "locator": "Tuy chon", "value": null},
+            {"action": "click", "element_type": "link text", 
+            "locator": "Doi mat khau", "value": null},
+
+            {"action": "send_keys", "element_type": "id", 
+            "locator": "id_password", "value": "a"},
+            {"action": "send_keys", "element_type": "id", 
+            "locator": "id_newpassword1", "value": "a"},
+            {"action": "send_keys", "element_type": "id", 
+            "locator": "id_newpassword2", "value": "b"},
+
+            {"action": "click", "element_type": "id", 
+            "locator": "id_submitbutton", "value": null}
+            
+        ],
+        "expected": {
+            "action" : "is_displayed",
+            "element_type": "id",
+            "locator": "id_error_newpassword1",
+            "value": "true"
+        }
+    }
+\end{lstlisting}
