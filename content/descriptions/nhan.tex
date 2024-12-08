@@ -1,0 +1,236 @@
+\subsection{Edit Student Name}
+\subsubsection{Level 1}
+Ở level 1, mỗi testcase bao gồm các trường:
+\begin{itemize}
+    \item \textbf{last\_name}: Họ mới sẽ được thay đổi
+    \item \textbf{first\_name}: .Tên đệm và tên mới sẽ được thay đỏi
+    \item \textbf{error\_firstname}: Lỗi đối với ô Tên đệm và tên
+    \item \textbf{error\_lastname}: Lỗi đối với ô Họ
+\end{itemize}
+
+Ví dụ:
+\begin{lstlisting}[language=bash, caption={Ví dụ testcase ESN-001-0002 ở level 1}]
+    {
+        "last_name": "Smith",
+        "first_name": "",
+        "error_firstname": "- Xin cho biết tên và tên đệm",
+        "error_lastname": ""
+    }
+\end{lstlisting}
+\subsubsection{Level 2}
+Ở level 2, mỗi testcase bao gồm các trường:
+\begin{itemize}
+    \item \textbf{test\_case}: Đánh dấu số thứ tự test case
+    \item \textbf{last\_name}: Họ mới sẽ được thay đổi
+    \item \textbf{first\_name}: .Tên đệm và tên mới sẽ được thay đỏi
+    \item \textbf{error\_firstname}: Lỗi đối với ô Tên đệm và tên
+    \item \textbf{error\_lastname}: Lỗi đối với ô Họ
+    \item \textbf{step}: Danh sách các bước cần thực hiện. Mỗi bước có thể chứa các trường như sau:
+    \begin{itemize}
+        \item \textbf{action}: Hành động cần thực hiện
+        \item \textbf{url}: Đường dẫn url của trang web
+        \item \textbf{width, height}: Kích thước màn hình
+        \item \textbf{element\_type}: Loại định danh (xpath, id, name, link text,...)
+        \item \textbf{locator}:Định danh của phần tử cần thao tác.
+        \item \textbf{value}: Giá trị cần nhập hoặc cần kiểm tra.
+    \end{itemize}
+\end{itemize}
+
+Ví dụ:
+\begin{lstlisting}[language=bash, caption={Ví dụ testcase ESN-001-0001 ở level 2}]
+    {
+        "test_case": "Test case 1",
+        "last_name": "John",
+        "first_name": "Kamala",
+        "error_lastname": "",
+        "error_firstname": "",
+        "steps": [
+            {
+                "action": "open",
+                "url": "https://school.moodledemo.net/?lang=vi"
+            },
+            {
+                "action": "set_window_size",
+                "width": 838,
+                "height": 816
+            },
+            {
+                "action": "click",
+                "elementType": "LINK_TEXT",
+                "locator": "Đăng nhập"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "ID",
+                "locator": "username",
+                "value": "student"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "ID",
+                "locator": "password",
+                "value": "moodle2024"
+            },
+            {
+                "action": "click",
+                "elementType": "ID",
+                "locator": "loginbtn"
+            },
+            {
+                "action": "click",
+                "elementType": "ID",
+                "locator": "user-menu-toggle"
+            },
+            {
+                "action": "click",
+                "elementType": "LINK_TEXT",
+                "locator": "Hồ sơ"
+            },
+            {
+                "action": "click",
+                "elementType": "LINK_TEXT",
+                "locator": "Sửa hồ sơ cá nhân"
+            },
+            {
+                "action": "clear",
+                "elementType": "ID",
+                "locator": "id_firstname"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "ID",
+                "locator": "id_firstname",
+                "value": "Kamala"
+            },
+            {
+                "action": "clear",
+                "elementType": "ID",
+                "locator": "id_lastname"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "ID",
+                "locator": "id_lastname",
+                "value": "John"
+            },
+            {
+                "action": "click",
+                "elementType": "ID",
+                "locator": "id_submitbutton"
+            },
+            {
+                "action": "assert_text",
+                "elementType": "CSS_SELECTOR",
+                "locator": ".h2",
+                "value": "Kamala John"
+            }
+        ]
+    }
+\end{lstlisting}
+\subsection{Find Course}
+\subsubsection{Level 1}
+Ở level 1, mỗi testcase bao gồm các trường:
+\begin{itemize}
+    \item \textbf{str}: Chuỗi được nhập vào ô "Tìm kiếm"
+    \item \textbf{list\_course}: Danh sách các khóa học mong đợi sẽ xuất hiện
+\end{itemize}
+
+\begin{lstlisting}[language=bash, caption={Ví dụ testcase FC-001-0003 ở level 1}]
+    {
+        "str": "math",
+        "list_course": ["Junior Mathematics"]
+    }
+\end{lstlisting}
+\subsubsection{Level 2}
+Ở level 2, mỗi testcase bao gồm các trường:
+\begin{itemize}
+    \item \textbf{test\_case}: Đánh dấu số thứ tự test case
+    \item \textbf{search\_str}: Chuỗi được nhập vào ô "Tìm kiếm"
+    \item \textbf{expected\_course}: Danh sách các khóa học mong đợi sẽ xuất hiện
+    \item \textbf{step}: Danh sách các bước cần thực hiện. Mỗi bước có thể chứa các trường như sau:
+    \begin{itemize}
+        \item \textbf{action}: Hành động cần thực hiện
+        \item \textbf{url}: Đường dẫn url của trang web
+        \item \textbf{width, height}: Kích thước màn hình
+        \item \textbf{element\_type}: Loại định danh (xpath, id, name, link text,...)
+        \item \textbf{locator}:Định danh của phần tử cần thao tác.
+        \item \textbf{value}: Giá trị cần nhập
+        \item \textbf{expected}: Gía trị cần kiểm tra
+    \end{itemize}
+\end{itemize}
+
+\begin{lstlisting}[language=bash, caption={Ví dụ testcase FC-001-0003 ở level 2}]
+    {
+        "test_case": "Find Course Test 3",
+        "search_str": "math",
+        "expected_courses": ["Junior Mathematics"],
+        "steps": [
+            {
+                "action": "open",
+                "url": "https://school.moodledemo.net/?lang=vi"
+            },
+            {
+                "action": "set_window_size",
+                "width": 838,
+                "height": 816
+            },
+            {
+                "action": "click",
+                "elementType": "LINK_TEXT",
+                "locator": "Đăng nhập"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "ID",
+                "locator": "username",
+                "value": "student"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "ID",
+                "locator": "password",
+                "value": "moodle2024"
+            },
+            {
+                "action": "click",
+                "elementType": "ID",
+                "locator": "loginbtn"
+            },
+            {
+                "action": "click",
+                "elementType": "ID",
+                "locator": "groupingdropdown"
+            },
+            {
+                "action": "click",
+                "elementType": "CSS_SELECTOR",
+                "locator": "a[data-value='all']"
+            },
+            {
+                "action": "click",
+                "elementType": "XPATH",
+                "locator": "//button[@type='button' and @data-action='limit-toggle']"
+            },
+            {
+                "action": "click",
+                "elementType": "LINK_TEXT",
+                "locator": "Tất cả"
+            },
+            {
+                "action": "send_keys",
+                "elementType": "CSS_SELECTOR",
+                "locator": "input[data-region='input'][data-action='search']",
+                "value": "math"
+            },
+            {
+                "action": "wait",
+                "seconds": 5
+            },
+            {
+                "action": "validate_courses",
+                "locator": "//span[contains(@class, 'multiline')]//span[@class='sr-only']",
+                "expected": ["Junior Mathematics"]
+            }
+        ]
+    }
+\end{lstlisting}
