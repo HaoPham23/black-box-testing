@@ -1,0 +1,151 @@
+\subsection{Private Message}
+\subsubsection{Level 1}
+Ở level 1, mỗi testcase bao gồm các trường:
+\begin{itemize}
+    \item \textbf{id}: Mã số của testcase
+    \item \textbf{message}: Nội dung tin nhắn được gửi đi.
+    \item \textbf{expected\_text}: Nội dung tin nhắn kết quả để kiếm tra so sánh trùng khớp.
+\end{itemize}
+
+\noindent Ví dụ:
+\begin{lstlisting}[language=bash, caption={Ví dụ testcase PM-001-0001 ở level 1}]
+    {
+      "id": "PM-001-001",
+      "message": "ABCDEFMLAKSPQKAMLAMN",
+      "expected_text": "ABCDEFMLAKSPQKAMLAMN"
+    }
+\end{lstlisting}
+
+\subsubsection{Level 2}
+Ở level 2, các trường chung bao gồm:
+
+\begin{itemize}
+    \item \textbf{url}: Đường dẫn trang web.
+    \item \textbf{username}: Tên đăng nhập.
+    \item \textbf{password}: Mật khẩu.
+\end{itemize}
+Tiếp theo là các trường \texttt{selectors} với các giá trị bên trong bao gồm \texttt{type} (ví dụ: ID, XPATH, CSS\_SELECTOR,..) và \texttt{value}. Các \texttt{selectors} ở đây gồm có:
+\begin{itemize}
+    \item \textbf{login\_link}: Liên kết đăng nhập.
+    \item \textbf{username\_input}: Trường nhập tên đăng nhập.
+    \item \textbf{password\_input}: Trường nhập mật khẩu.
+    \item \textbf{login\_button}: Nút đăng nhập.
+    \item \textbf{messaging\_drawer\_toggle}: Nút bật/tắt bảng tin nhắn.
+    \item \textbf{messages\_overview\_toggle}: Nút chuyển đổi xem tổng quan tin nhắn.
+    \item \textbf{contact\_select}: Lựa chọn liên hệ.
+    \item \textbf{message\_input}: Trường nhập tin nhắn.
+    \item \textbf{send\_button}: Nút gửi tin nhắn.
+    \item \textbf{message\_container}: Vùng chứa tin nhắn.
+    \item \textbf{message\_text}: Nội dung tin nhắn.
+    \item \textbf{window\_size}: Kích thước cửa sổ.
+\end{itemize}
+
+\noindent Tiếp đó là trường \texttt{testcase}, mỗi testcase sẽ có các trường:
+\begin{itemize}
+    \item \textbf{id}: Mã số của testcase
+    \item \textbf{message}: Nội dung tin nhắn được gửi đi.
+    \item \textbf{expected\_text}: Nội dung tin nhắn kết quả để kiếm tra so sánh trùng khớp.
+\end{itemize}
+
+\noindent Ví dụ:
+\begin{lstlisting}[language=bash]
+    "url": "https://school.moodledemo.net/",
+    "login_credentials": {
+        "username": "amandahamilto205",
+        "password": "moodle"
+    },
+    "selectors": {
+        "login_link": {
+          "type": "LINK_TEXT",
+          "value": "Log in"
+        },
+        "username_input": {
+          "type": "ID",
+          "value": "username"
+        },
+    },
+    ...
+    "test_cases": [
+    {
+        "id": "PM-001-001",
+        "message": "ABCDEFMLAKSPQKAMLAMN",
+        "expected_text": "ABCDEFMLAKSPQKAMLAMN"
+    },
+\end{lstlisting}
+
+\subsection{Private File Upload}
+\subsubsection{Level 1}
+Ở level 1, mỗi testcase bao gồm các trường:
+\begin{itemize}
+    \item \textbf{id}: Mã số của testcase
+    \item \textbf{file\_path}: Đường dẫn file từ máy tính. Lấy file từ: \href{https://drive.google.com/drive/folders/1mAcoKv5-AXE3Vms1LvrvOoVR0mKdqAaT?usp=sharing}{Link file test}.
+    \item \textbf{expected\_message}: Kết quả thông báo mong đợi sau khi upload file.
+\end{itemize}
+\noindent Ví dụ:
+\begin{lstlisting}[language=bash]
+    {
+      "id": "PF-001-002",
+      "file_path": "D:\\1byte.txt",
+      "expected_message": "Changes saved"
+    }
+\end{lstlisting}
+
+\subsubsection{Level 2}
+Ở level 2, các testcase sẽ có các trường chung như sau:
+\begin{itemize}
+    \item \textbf{url}: Đường dẫn trang web.
+    \item \textbf{window\_size}: Kích thước cửa sổ (bao gồm chiều rộng và chiều cao).
+    \item \textbf{credentials}: Thông tin đăng nhập (bao gồm tên người dùng và mật khẩu).
+    \item \textbf{selectors}: Các bộ chọn cho các phần tử trên trang web.
+    \begin{itemize}
+        \item \textbf{login\_link}: Liên kết đăng nhập.
+        \item \textbf{username\_field}: Trường nhập tên đăng nhập.
+        \item \textbf{password\_field}: Trường nhập mật khẩu.
+        \item \textbf{login\_button}: Nút đăng nhập.
+        \item \textbf{user\_menu}: Menu người dùng.
+        \item \textbf{private\_files}: Tệp riêng tư.
+        \item \textbf{add\_file\_button}: Nút thêm tệp.
+        \item \textbf{file\_input}: Trường nhập tệp.
+        \item \textbf{upload\_button}: Nút tải lên.
+        \item \textbf{error\_message}: Thông báo lỗi.
+        \item \textbf{submit\_button}: Nút gửi.
+        \item \textbf{toast\_message}: Thông báo kiểu toast.
+    \end{itemize}
+    \item \textbf{timeouts}: Thời gian chờ cho các thao tác.
+    \begin{itemize}
+        \item \textbf{error\_wait}: Thời gian chờ cho thông báo lỗi.
+        \item \textbf{element\_wait}: Thời gian chờ cho phần tử xuất hiện.
+        \item \textbf{small\_file\_wait}: Thời gian chờ cho tệp nhỏ.
+        \item \textbf{large\_file\_wait}: Thời gian chờ cho tệp lớn.
+    \end{itemize}
+    \item \textbf{file\_size\_threshold}: Ngưỡng kích thước tệp.
+\end{itemize}
+
+\noindent Ví dụ:
+\begin{lstlisting}[language=bash]
+      "url": "https://school.moodledemo.net/",
+      "window_size": {
+        "width": 1296,
+        "height": 696
+      },
+      "credentials": {
+        "username": "amandahamilto205",
+        "password": "moodle"
+      },
+      "selectors": {
+        "login_link": "Log in",
+        "username_field": "username",
+        "password_field": "password",
+        "login_button": "loginbtn"
+        ....
+      },
+      "timeouts": {
+        "error_wait": 3,
+        "element_wait": 10,
+        "small_file_wait": 15,
+        "large_file_wait": 2700
+      },
+      "file_size_threshold": 90000000,
+\end{lstlisting}
+\vspace{10pt}
+\noindent Tiếp theo đó là tập hợp các testcase như level 1.
