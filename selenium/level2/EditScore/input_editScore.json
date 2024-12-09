@@ -1,0 +1,173 @@
+[
+    {
+        "id": "ES-1-001",
+        "url": "https://school.moodledemo.net/",
+        "tasks": [
+            {"action": "click", "element_type": "id", "locator": "lang-menu-toggle", "value": null},
+            {"action": "scroll", "element_type": "xpath", "locator": "//*[@id='lang-action-menu']/a[101]", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//*[@id='lang-action-menu']/a[101]", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "Đăng nhập", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "teacher"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "moodle2024"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+
+            {"action": "click", "element_type": "link text", "locator": "Mindful course creation", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "Điểm số", "value": null},
+            {"action": "close_modal", "element_type": "", "locator": "", "value": null},
+
+            {"action": "click", "element_type": "xpath", "locator": "//*[@id='usernavigation']/form", "value": null},
+
+            {"action": "scroll", "element_type": "id", "locator": "grade_14_490", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "grade_14_490", "value": ""},
+
+            {"action": "click", "element_type": "id", "locator": "gradersubmit", "value": null},
+
+            {"action": "sleep", "element_type": "", "locator": "", "value": 3}
+                       
+        ],
+        "expected": {
+            "action" : "text",
+            "element_type": "id",
+            "locator": "grade_14_490",
+            "value": ""
+        }
+    },
+    {
+        "id": "ES-1-002",
+        "url": "https://school.moodledemo.net/",
+        "tasks": [
+            {"action": "click", "element_type": "id", "locator": "lang-menu-toggle", "value": null},
+            {"action": "scroll", "element_type": "xpath", "locator": "//*[@id='lang-action-menu']/a[101]", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//*[@id='lang-action-menu']/a[101]", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "Đăng nhập", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "teacher"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "moodle2024"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+
+            {"action": "click", "element_type": "link text", "locator": "Mindful course creation", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "Điểm số", "value": null},
+            {"action": "close_modal", "element_type": "", "locator": "", "value": null},
+
+            {"action": "click", "element_type": "xpath", "locator": "//*[@id='usernavigation']/form", "value": null},
+
+            {"action": "scroll", "element_type": "id", "locator": "grade_10_490", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "grade_10_490", "value": "9,00"},
+
+            {"action": "click", "element_type": "id", "locator": "gradersubmit", "value": null},
+
+            {"action": "sleep", "element_type": "", "locator": "", "value": 3}
+                       
+        ],
+        "expected": {
+            "action" : "att_value",
+            "element_type": "id",
+            "locator": "grade_10_490",
+            "value": "9,00"
+        }
+    },
+    {
+        "id": "ES-1-003",
+        "url": "https://school.moodledemo.net/",
+        "tasks": [
+            {"action": "click", "element_type": "id", "locator": "lang-menu-toggle", "value": null},
+            {"action": "scroll", "element_type": "xpath", "locator": "//*[@id='lang-action-menu']/a[101]", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//*[@id='lang-action-menu']/a[101]", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "Đăng nhập", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "teacher"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "moodle2024"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+
+            {"action": "click", "element_type": "link text", "locator": "Mindful course creation", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "Điểm số", "value": null},
+            {"action": "close_modal", "element_type": "", "locator": "", "value": null},
+
+            {"action": "click", "element_type": "xpath", "locator": "//*[@id='usernavigation']/form", "value": null},
+
+            {"action": "scroll", "element_type": "id", "locator": "grade_12_490", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "grade_12_490", "value": "2-3e"},
+
+            {"action": "click", "element_type": "id", "locator": "gradersubmit", "value": null},
+
+            {"action": "sleep", "element_type": "", "locator": "", "value": 3}
+                       
+        ],
+        "expected": {
+            "action" : "text",
+            "element_type": "id",
+            "locator": "grade_12_490",
+            "value": ""
+        }
+    },
+    {
+        "id": "ES-1-004",
+        "url": "https://school.moodledemo.net/",
+        "tasks": [
+            {"action": "click", "element_type": "id", "locator": "lang-menu-toggle", "value": null},
+            {"action": "scroll", "element_type": "xpath", "locator": "//*[@id='lang-action-menu']/a[101]", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//*[@id='lang-action-menu']/a[101]", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "Đăng nhập", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "teacher"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "moodle2024"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+
+            {"action": "click", "element_type": "link text", "locator": "Mindful course creation", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "Điểm số", "value": null},
+            {"action": "close_modal", "element_type": "", "locator": "", "value": null},
+
+            {"action": "click", "element_type": "xpath", "locator": "//*[@id='usernavigation']/form", "value": null},
+
+            {"action": "scroll", "element_type": "id", "locator": "grade_12_490", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "grade_12_490", "value": "92"},
+
+            {"action": "click", "element_type": "id", "locator": "gradersubmit", "value": null},
+
+            {"action": "sleep", "element_type": "", "locator": "", "value": 3}
+                       
+        ],
+        "expected": {
+            "action" : "text",
+            "element_type": "id",
+            "locator": "grade_12_490",
+            "value": ""
+        }
+    },
+    {
+        "id": "ES-1-005",
+        "url": "https://school.moodledemo.net/",
+        "tasks": [
+            {"action": "click", "element_type": "id", "locator": "lang-menu-toggle", "value": null},
+            {"action": "scroll", "element_type": "xpath", "locator": "//*[@id='lang-action-menu']/a[101]", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//*[@id='lang-action-menu']/a[101]", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "Đăng nhập", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "teacher"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "moodle2024"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+
+            {"action": "click", "element_type": "link text", "locator": "Mindful course creation", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "Điểm số", "value": null},
+            {"action": "close_modal", "element_type": "", "locator": "", "value": null},
+
+            {"action": "click", "element_type": "xpath", "locator": "//*[@id='usernavigation']/form", "value": null},
+
+            {"action": "scroll", "element_type": "id", "locator": "grade_12_490", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "grade_12_490", "value": "-2"},
+
+            {"action": "click", "element_type": "id", "locator": "gradersubmit", "value": null},
+
+            {"action": "sleep", "element_type": "", "locator": "", "value": 3}
+                       
+        ],
+        "expected": {
+            "action" : "text",
+            "element_type": "id",
+            "locator": "grade_12_490",
+            "value": ""
+        }
+    }
+    
+]

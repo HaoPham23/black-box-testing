@@ -1,0 +1,28 @@
+[
+  {
+    "id": "ES-1-001",
+    "score" : "",
+    "error": null  
+  },
+  {
+    "id": "ES-1-003",
+    "score" : "9,00",
+    "error": null     
+  },
+  {
+    "id": "ES-1-002",
+    "score" : "2-3e",
+    "error": "Vui lòng nhập một số."      
+  },
+  {
+    "id": "ES-1-004",
+    "score" : "92",
+    "error": "Giá trị phải nhỏ hơn hoặc bằng 10."    
+  },
+  {
+    "id": "ES-1-005",
+    "score" : "-2",
+    "error": "Giá trị phải lớn hơn hoặc bằng 0."      
+  }
+]
+  
