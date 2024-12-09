@@ -1,0 +1,267 @@
+[
+    {
+        "id": "MF-1-001",
+        "url": "https://school.moodledemo.net/",
+        "tasks": [
+            {"action": "click", "element_type": "id", "locator": "lang-menu-toggle", "value": null},
+            {"action": "scroll", "element_type": "xpath", "locator": "//*[@id='lang-action-menu']/a[101]", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//*[@id='lang-action-menu']/a[101]", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "Đăng nhập", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "teacher"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "moodle2024"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+
+            {"action": "click", "element_type": "link text", "locator": "Mindful course creation", "value": null},
+            {"action": "scroll", "element_type": "xpath", "locator": "//*[@id='module-967']/div/div[2]/div[2]/div/div/a", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//*[@id='module-967']/div/div[2]/div[2]/div/div/a", "value": null},
+
+            {"action": "refresh", "element_type": "", "locator": "", "value": null},
+            
+
+            {"action": "scroll", "element_type": "xpath", "locator": "//*[@id='region-main']/div[2]/div[1]/div/div[2]/a", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//*[@id='region-main']/div[2]/div[1]/div/div[2]/a", "value": null},
+
+            {"action": "scroll", "element_type": "id", "locator": "id_subject", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "id_subject", "value": "Assignment Submit Date"},
+            
+            
+
+            {"action": "switch", "element_type": "xpath", "locator": "//*[@id='id_message_ifr']", "value": null},
+
+            {"action": "send_keys", "element_type": "id", "locator": "tinymce", "value": "Before 24/11/2024"},
+            {"action": "switch_default", "element_type": "", "locator": null, "value": null},
+
+            {"action": "scroll", "element_type": "id", "locator": "id_submitbutton", "value": null},
+            {"action": "click", "element_type": "id", "locator": "id_submitbutton", "value": null}
+            
+        ],
+        "expected": {
+            "action" : "is_displayed",
+            "element_type": "id",
+            "locator": "user-notifications",
+            "value": "true"
+        }
+    },
+    {
+        "id": "MF-1-002",
+        "url": "https://school.moodledemo.net/",
+        "tasks": [
+            {"action": "click", "element_type": "id", "locator": "lang-menu-toggle", "value": null},
+            {"action": "scroll", "element_type": "xpath", "locator": "//*[@id='lang-action-menu']/a[101]", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//*[@id='lang-action-menu']/a[101]", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "Đăng nhập", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "teacher"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "moodle2024"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+
+            {"action": "click", "element_type": "link text", "locator": "Mindful course creation", "value": null},
+            {"action": "scroll", "element_type": "xpath", "locator": "//*[@id='module-967']/div/div[2]/div[2]/div/div/a", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//*[@id='module-967']/div/div[2]/div[2]/div/div/a", "value": null},
+
+            {"action": "refresh", "element_type": "", "locator": "", "value": null},
+            
+
+            {"action": "scroll", "element_type": "xpath", "locator": "//*[@id='region-main']/div[2]/div[1]/div/div[2]/a", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//*[@id='region-main']/div[2]/div[1]/div/div[2]/a", "value": null},
+
+            {"action": "scroll", "element_type": "id", "locator": "id_subject", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "id_subject", "value": "Artificial Intelligence is rapidly transforming various industries, offering innovative solutions to complex problems. From automating mundane tasks to providing deep insights through data analysis, AI plays a pivotal role in enhancing efficiency, accuracy, and decision-making. Its applications span healthcare, finance, education, entertainment, and beyond. For instance, in healthcare, AI-powered systems assist in diagnosing diseases, recommending treatments, and even predicting patient outcomes. In finance, it helps detect fraud, manage investments, and optimize trading strategies. Meanwhile, educational platforms leverage AI to personalize learning experiences, ensuring students receive tailored guidance. As technology advances, the integration of AI into daily life continues to expand, promising a future where intelligent systems collaborate seamlessly with humans to achieve greater innovation and success. However, ethical considerations, such as privacy, bias, and accountability, remain critical in developing responsible AI solutions."},
+            
+            
+
+            {"action": "switch", "element_type": "xpath", "locator": "//*[@id='id_message_ifr']", "value": null},
+
+            {"action": "send_keys", "element_type": "id", "locator": "tinymce", "value": "Write your opinion about this. "},
+            {"action": "switch_default", "element_type": "", "locator": null, "value": null},
+
+            {"action": "scroll", "element_type": "id", "locator": "id_submitbutton", "value": null},
+            {"action": "click", "element_type": "id", "locator": "id_submitbutton", "value": null}
+            
+        ],
+        "expected": {
+            "action" : "is_displayed",
+            "element_type": "id",
+            "locator": "id_error_subject",
+            "value": "true"
+        }
+    },
+    {
+        "id": "MF-1-003",
+        "url": "https://school.moodledemo.net/",
+        "tasks": [
+            {"action": "click", "element_type": "id", "locator": "lang-menu-toggle", "value": null},
+            {"action": "scroll", "element_type": "xpath", "locator": "//*[@id='lang-action-menu']/a[101]", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//*[@id='lang-action-menu']/a[101]", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "Đăng nhập", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "teacher"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "moodle2024"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+
+            {"action": "click", "element_type": "link text", "locator": "Mindful course creation", "value": null},
+            {"action": "scroll", "element_type": "xpath", "locator": "//*[@id='module-967']/div/div[2]/div[2]/div/div/a", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//*[@id='module-967']/div/div[2]/div[2]/div/div/a", "value": null},
+
+            {"action": "refresh", "element_type": "", "locator": "", "value": null},
+            
+
+            {"action": "scroll", "element_type": "xpath", "locator": "//*[@id='region-main']/div[2]/div[1]/div/div[2]/a", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//*[@id='region-main']/div[2]/div[1]/div/div[2]/a", "value": null},
+
+            {"action": "scroll", "element_type": "id", "locator": "id_subject", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "id_subject", "value": "Please finish your report, print it and submit it nextMonday"},
+            
+            
+
+            {"action": "switch", "element_type": "xpath", "locator": "//*[@id='id_message_ifr']", "value": null},
+
+            {"action": "send_keys", "element_type": "id", "locator": "tinymce", "value": ""},
+            {"action": "switch_default", "element_type": "", "locator": null, "value": null},
+
+            {"action": "scroll", "element_type": "id", "locator": "id_submitbutton", "value": null},
+            {"action": "click", "element_type": "id", "locator": "id_submitbutton", "value": null}
+            
+        ],
+        "expected": {
+            "action" : "is_displayed",
+            "element_type": "id",
+            "locator": "id_error_message",
+            "value": "true"
+        }
+    },
+    {
+        "id": "MF-1-004",
+        "url": "https://school.moodledemo.net/",
+        "tasks": [
+            {"action": "click", "element_type": "id", "locator": "lang-menu-toggle", "value": null},
+            {"action": "scroll", "element_type": "xpath", "locator": "//*[@id='lang-action-menu']/a[101]", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//*[@id='lang-action-menu']/a[101]", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "Đăng nhập", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "teacher"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "moodle2024"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+
+            {"action": "click", "element_type": "link text", "locator": "Mindful course creation", "value": null},
+            {"action": "scroll", "element_type": "xpath", "locator": "//*[@id='module-967']/div/div[2]/div[2]/div/div/a", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//*[@id='module-967']/div/div[2]/div[2]/div/div/a", "value": null},
+
+            {"action": "refresh", "element_type": "", "locator": "", "value": null},
+            
+
+            {"action": "scroll", "element_type": "xpath", "locator": "//*[@id='region-main']/div[2]/div[1]/div/div[2]/a", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//*[@id='region-main']/div[2]/div[1]/div/div[2]/a", "value": null},
+
+            {"action": "scroll", "element_type": "id", "locator": "id_subject", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "id_subject", "value": "Artificial Intelligence is rapidly transforming various industries, offering innovative solutions to complex problems. From automating mundane tasks to providing deep insights through data analysis, AI plays a pivotal role in enhancing efficiency, accuracy, and decision-making. Its applications span healthcare, finance, education, entertainment, and beyond. For instance, in healthcare, AI-powered systems assist in diagnosing diseases, recommending treatments, and even predicting patient outcomes. In finance, it helps detect fraud, manage investments, and optimize trading strategies. Meanwhile, educational platforms leverage AI to personalize learning experiences, ensuring students receive tailored guidance. As technology advances, the integration of AI into daily life continues to expand, promising a future where intelligent systems collaborate seamlessly with humans to achieve greater innovation and success. However, ethical considerations, such as privacy, bias, and accountability, remain critical in developing responsible AI solutions."},
+            
+            
+
+            {"action": "switch", "element_type": "xpath", "locator": "//*[@id='id_message_ifr']", "value": null},
+
+            {"action": "send_keys", "element_type": "id", "locator": "tinymce", "value": ""},
+            {"action": "switch_default", "element_type": "", "locator": null, "value": null},
+
+            {"action": "scroll", "element_type": "id", "locator": "id_submitbutton", "value": null},
+            {"action": "click", "element_type": "id", "locator": "id_submitbutton", "value": null}
+            
+        ],
+        "expected": {
+            "action" : "is_displayed",
+            "element_type": "id",
+            "locator": "id_error_subject",
+            "value": "true"
+        }
+    },
+    {
+        "id": "MF-1-005",
+        "url": "https://school.moodledemo.net/",
+        "tasks": [
+            {"action": "click", "element_type": "id", "locator": "lang-menu-toggle", "value": null},
+            {"action": "scroll", "element_type": "xpath", "locator": "//*[@id='lang-action-menu']/a[101]", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//*[@id='lang-action-menu']/a[101]", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "Đăng nhập", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "teacher"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "moodle2024"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+
+            {"action": "click", "element_type": "link text", "locator": "Mindful course creation", "value": null},
+            {"action": "scroll", "element_type": "xpath", "locator": "//*[@id='module-967']/div/div[2]/div[2]/div/div/a", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//*[@id='module-967']/div/div[2]/div[2]/div/div/a", "value": null},
+
+            {"action": "refresh", "element_type": "", "locator": "", "value": null},
+            
+
+            {"action": "scroll", "element_type": "xpath", "locator": "//*[@id='region-main']/div[2]/div[1]/div/div[2]/a", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//*[@id='region-main']/div[2]/div[1]/div/div[2]/a", "value": null},
+
+            {"action": "scroll", "element_type": "id", "locator": "id_subject", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "id_subject", "value": ""},
+            
+            
+
+            {"action": "switch", "element_type": "xpath", "locator": "//*[@id='id_message_ifr']", "value": null},
+
+            {"action": "send_keys", "element_type": "id", "locator": "tinymce", "value": ""},
+            {"action": "switch_default", "element_type": "", "locator": null, "value": null},
+
+            {"action": "scroll", "element_type": "id", "locator": "id_submitbutton", "value": null},
+            {"action": "click", "element_type": "id", "locator": "id_submitbutton", "value": null}
+            
+        ],
+        "expected": {
+            "action" : "is_displayed",
+            "element_type": "id",
+            "locator": "id_error_message",
+            "value": "true"
+        }
+    },
+    {
+        "id": "MF-1-006",
+        "url": "https://school.moodledemo.net/",
+        "tasks": [
+            {"action": "click", "element_type": "id", "locator": "lang-menu-toggle", "value": null},
+            {"action": "scroll", "element_type": "xpath", "locator": "//*[@id='lang-action-menu']/a[101]", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//*[@id='lang-action-menu']/a[101]", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "Đăng nhập", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "teacher"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "moodle2024"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+
+            {"action": "click", "element_type": "link text", "locator": "Mindful course creation", "value": null},
+            {"action": "scroll", "element_type": "xpath", "locator": "//*[@id='module-967']/div/div[2]/div[2]/div/div/a", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//*[@id='module-967']/div/div[2]/div[2]/div/div/a", "value": null},
+
+            {"action": "refresh", "element_type": "", "locator": "", "value": null},
+            
+
+            {"action": "scroll", "element_type": "xpath", "locator": "//*[@id='region-main']/div[2]/div[1]/div/div[2]/a", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//*[@id='region-main']/div[2]/div[1]/div/div[2]/a", "value": null},
+
+            {"action": "scroll", "element_type": "id", "locator": "id_subject", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "id_subject", "value": ""},
+            
+            
+
+            {"action": "switch", "element_type": "xpath", "locator": "//*[@id='id_message_ifr']", "value": null},
+
+            {"action": "send_keys", "element_type": "id", "locator": "tinymce", "value": "Hãy tạo nhóm từ 3 tới 5 người và hoàn thành nội dung thảo luận về AI và con người. "},
+            {"action": "switch_default", "element_type": "", "locator": null, "value": null},
+
+            {"action": "scroll", "element_type": "id", "locator": "id_submitbutton", "value": null},
+            {"action": "click", "element_type": "id", "locator": "id_submitbutton", "value": null}
+            
+        ],
+        "expected": {
+            "action" : "is_displayed",
+            "element_type": "id",
+            "locator": "id_error_subject",
+            "value": "true"
+        }
+    }
+    
+]

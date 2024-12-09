@@ -118,9 +118,10 @@ class TestChangePassword:
         if error is not None:
             # Check for expected error presence
             try:
+                # time.sleep(3)
                 assert driver.find_element(By.ID, error).is_displayed()
             except NoSuchElementException:
                 pytest.fail("Expected error element not found.")
         else:
             # Ensure no error messages and password change was successful
-            assert not driver.find_elements(By.ID, "error")
+            assert not driver.find_elements(By.ID, error)

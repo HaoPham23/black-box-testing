@@ -1,0 +1,166 @@
+\subsection{Message Forum}
+\subsubsection{Level 1}
+Ở level 1, mỗi testcase bao gồm các trường:
+\begin{itemize}
+    \item \textbf{id}: Mã số của testcase.
+    \item \textbf{subject}: Chủ đề của thông báo cần gửi vào forum, tiêu đề
+    \item \textbf{message}: Nội dung của thông báo cần gửi vào forum
+    \item \textbf{error}: Trả về mã lỗi không mong đợi, hoặc kết quả nếu thành công
+\end{itemize}
+
+Ví dụ:
+\begin{lstlisting}[language=bash, caption={Ví dụ testcase MF-1-001 ở level 1}]
+    {
+    "id": "MF-1-001",
+    "subject" : "Assignment Submit Date",
+    "message" : "Before 24/11/2024",
+    "error": "user-notifications"  
+  }
+\end{lstlisting}
+\subsubsection{Level 2}
+
+Ở level 2, mỗi testcase sẽ bao gồm các trường:
+\begin{itemize}
+    \item \textbf{id}: Mã số của testcase.
+    \item \textbf{url}: Đường dẫn đến trang chủ của khoá học.
+    \item \textbf{tasks}: Danh sách từng bước cần thực hiện. Mỗi bước bao gồm:
+\begin{itemize}
+    \item \textbf{action}: Hành động cần thực hiện.
+    \item \textbf{element\_type}: Loại định danh (xpath, id, name, link text,...).
+    \item \textbf{locator}: Định danh của phần tử cần thao tác.
+    \item \textbf{value}: Giá trị cần nhập vào phần tử (nếu có).
+\end{itemize}
+    \item \textbf{expected}: Kết quả mong đợi. Bao gồm:
+\begin{itemize}
+    \item \textbf{action}: Hành động cần kiểm tra.
+    \item \textbf{element\_type}: Loại định danh (xpath, id, name, link text,...).
+    \item \textbf{locator}: Định danh của phần tử cần kiểm tra.
+    \item \textbf{value}: Giá trị cần kiểm tra (nếu có).
+\end{itemize}
+\end{itemize}
+
+Ví dụ:
+\begin{lstlisting}[language=bash, caption={Ví dụ testcase MF-1-001 ở level 2}, breaklines=true]
+    {
+        "id": "MF-1-001",
+        "url": "https://school.moodledemo.net/",
+        "tasks": [
+            {"action": "click", "element_type": "id", "locator": "lang-menu-toggle", "value": null},
+            {"action": "scroll", "element_type": "xpath", "locator": "//*[@id='lang-action-menu']/a[101]", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//*[@id='lang-action-menu']/a[101]", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "Đăng nhập", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "teacher"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "moodle2024"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+
+            {"action": "click", "element_type": "link text", "locator": "Mindful course creation", "value": null},
+            {"action": "scroll", "element_type": "xpath", "locator": "//*[@id='module-967']/div/div[2]/div[2]/div/div/a", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//*[@id='module-967']/div/div[2]/div[2]/div/div/a", "value": null},
+
+            {"action": "refresh", "element_type": "", "locator": "", "value": null},
+            
+
+            {"action": "scroll", "element_type": "xpath", "locator": "//*[@id='region-main']/div[2]/div[1]/div/div[2]/a", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//*[@id='region-main']/div[2]/div[1]/div/div[2]/a", "value": null},
+
+            {"action": "scroll", "element_type": "id", "locator": "id_subject", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "id_subject", "value": "Assignment Submit Date"},
+            
+            
+
+            {"action": "switch", "element_type": "xpath", "locator": "//*[@id='id_message_ifr']", "value": null},
+
+            {"action": "send_keys", "element_type": "id", "locator": "tinymce", "value": "Before 24/11/2024"},
+            {"action": "switch_default", "element_type": "", "locator": null, "value": null},
+
+            {"action": "scroll", "element_type": "id", "locator": "id_submitbutton", "value": null},
+            {"action": "click", "element_type": "id", "locator": "id_submitbutton", "value": null}
+            
+        ],
+        "expected": {
+            "action" : "is_displayed",
+            "element_type": "id",
+            "locator": "user-notifications",
+            "value": "true"
+        }
+    }
+\end{lstlisting}
+\subsection{Edit Score}
+\subsubsection{Level 1}
+Ở level 1, mỗi testcase bao gồm các trường:
+\begin{itemize}
+    \item \textbf{id}: Mã số của testcase.
+    \item \textbf{score}: Điểm dùng để chỉnh sửa cho sinh viên
+    \item \textbf{error}: Mã lỗi thông báo lỗi, hoặc là null nếu thành công.
+\end{itemize}
+
+Ví dụ:
+\begin{lstlisting}[language=bash, caption={Ví dụ testcase ES-1-001 ở level 1}]
+    {
+        "id": "ES-1-001",
+        "score" : "",
+        "error": null  
+    },
+\end{lstlisting}
+
+\subsubsection{Level 2}
+
+Ở level 2, mỗi testcase sẽ bao gồm các trường:
+\begin{itemize}
+    \item \textbf{id}: Mã số của testcase.
+    \item \textbf{url}: Đường dẫn đến trang chủ các khoá học.
+    \item \textbf{tasks}: Danh sách từng bước cần thực hiện. Mỗi bước bao gồm:
+\begin{itemize}
+    \item \textbf{action}: Hành động cần thực hiện.
+    \item \textbf{element\_type}: Loại định danh (xpath, id, name, link text,...).
+    \item \textbf{locator}: Định danh của phần tử cần thao tác.
+    \item \textbf{value}: Giá trị cần nhập vào phần tử (nếu có).
+\end{itemize}
+    \item \textbf{expected}: Kết quả mong đợi. Bao gồm:
+\begin{itemize}
+    \item \textbf{action}: Hành động cần kiểm tra.
+    \item \textbf{element\_type}: Loại định danh (xpath, id, name, link text,...).
+    \item \textbf{locator}: Định danh của phần tử cần kiểm tra.
+    \item \textbf{value}: Giá trị cần kiểm tra (nếu có).
+\end{itemize}
+\end{itemize}
+
+Ví dụ:
+
+\begin{lstlisting}[language=bash, caption={Ví dụ testcase  ES-1-001 ở level 2}, breaklines=true]
+    {
+        "id": "ES-1-001",
+        "url": "https://school.moodledemo.net/",
+        "tasks": [
+            {"action": "click", "element_type": "id", "locator": "lang-menu-toggle", "value": null},
+            {"action": "scroll", "element_type": "xpath", "locator": "//*[@id='lang-action-menu']/a[101]", "value": null},
+            {"action": "click", "element_type": "xpath", "locator": "//*[@id='lang-action-menu']/a[101]", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "Đăng nhập", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "username", "value": "teacher"},
+            {"action": "click", "element_type": "id", "locator": "password", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "password", "value": "moodle2024"},
+            {"action": "click", "element_type": "id", "locator": "loginbtn", "value": null},
+
+            {"action": "click", "element_type": "link text", "locator": "Mindful course creation", "value": null},
+            {"action": "click", "element_type": "link text", "locator": "Điểm số", "value": null},
+            {"action": "close_modal", "element_type": "", "locator": "", "value": null},
+
+            {"action": "click", "element_type": "xpath", "locator": "//*[@id='usernavigation']/form", "value": null},
+
+            {"action": "scroll", "element_type": "id", "locator": "grade_14_490", "value": null},
+            {"action": "send_keys", "element_type": "id", "locator": "grade_14_490", "value": ""},
+
+            {"action": "click", "element_type": "id", "locator": "gradersubmit", "value": null},
+
+            {"action": "sleep", "element_type": "", "locator": "", "value": 3}
+                       
+        ],
+        "expected": {
+            "action" : "text",
+            "element_type": "id",
+            "locator": "grade_14_490",
+            "value": ""
+        }
+    }
+\end{lstlisting}
