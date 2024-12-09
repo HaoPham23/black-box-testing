@@ -31,26 +31,32 @@
   "file_size_threshold": 90000000,
   "test_files": [
     {
+      "id": "PF-002-001",
       "file_path": "D:\\0byte.txt",
       "expected_message": "The file '0byte.txt' is either empty or a folder. To upload folders zip them first."
     },
     {
+      "id": "PF-001-002",
       "file_path": "D:\\1byte.txt",
       "expected_message": "Changes saved"
     },
     {
+      "id": "PF-001-003",
       "file_path": "D:\\2byte.txt",
       "expected_message": "Changes saved"
     },
     {
+      "id": "PF-001-001",
       "file_path": "D:\\3mb.txt",
       "expected_message": "Changes saved"
     },
     {
+      "id": "PF-002-002",
       "file_path": "D:\\200mb.pdf",
       "expected_message": "The file '200mb.pdf' exceeds the limit of 100MB"
     },
     {
+      "id": "PF-001-004",
       "file_path": "D:\\100mb_1byte.jpg",
       "expected_message": "Changes saved"
     }
